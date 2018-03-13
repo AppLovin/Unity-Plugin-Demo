@@ -59,7 +59,8 @@ public class MainMenu : MonoBehaviour
 
 	private void onAppLovinEventReceived (string ev)
 	{
-		Log ("AppLovin Event: " + ev);
+		// Log AppLovin event
+		Log (ev);
 
 		if (ev.Contains ("REWARD")) {
 			if (ev.Equals ("REWARDAPPROVEDINFO")) {
