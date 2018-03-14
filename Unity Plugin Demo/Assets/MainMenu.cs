@@ -13,46 +13,70 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+	// Put AppLovin SDK Key here or in your AndroidManifest.xml / Info.plist
+	private const string SDK_KEY = "";
 
+	// Rewarded Video Button Texts
+	private const string REWARDED_VIDEO_BUTTON_TITLE_PRELOAD = "Preload Rewarded Video";
+	private const string REWARDED_VIDEO_BUTTON_TITLE_LOADING = "Show Rewarded Video";
+	private const string REWARDED_VIDEO_BUTTON_TITLE_SHOW = "Show Rewarded Video";
+
+	// UI Components
+	private Text RewardedVideoButtonTitle;
 	private Text StatusText;
+
+	// Controlled State
+	private bool IsPreloadingRewardedVideo = false;
 
 	void Start ()
 	{
-		StatusText = GameObject.Find ("StatusText").GetComponent<Text> (); 
+		// Setup UI
+		RewardedVideoButtonTitle = GameObject.Find ("RewardedVideoButtonTitle").GetComponent<Text> ();
+		RewardedVideoButtonTitle.text = REWARDED_VIDEO_BUTTON_TITLE_PRELOAD;
+		StatusText = GameObject.Find ("StatusText").GetComponent<Text> ();
 		StatusText.text = "";
 
 		// Set SDK key and initialize SDK
-		AppLovin.SetSdkKey (SdkKey);
+		AppLovin.SetSdkKey (SDK_KEY);
 		AppLovin.InitializeSdk ();
 		AppLovin.SetTestAdsEnabled ("true");
 		AppLovin.SetVerboseLoggingOn ("true"); // TODO: Remove
 		AppLovin.SetUnityAdListener ("MainMenu");
 		AppLovin.SetRewardedVideoUsername ("demo_user");
-
-		// Preload a Rewarded Ad
-		AppLovin.LoadRewardedInterstitial ();
 	}
 
 	public void ShowInterstitial ()
 	{
 		Log ("Showing interstitial ad");
+
+		// Optional: You can call `AppLovin.PreloadInterstitial()` and listen to the "LOADED" event to preload the ad from the network before showing it
 		AppLovin.ShowInterstitial ();
 	}
 
-	// TODO: Rename
-	public void ShowRewardedInterstitial ()
+	public void PreloadOrShowRewardedInterstitial ()
 	{
 		if (AppLovin.IsIncentInterstitialReady ()) {
+
 			Log ("Showing rewarded ad...");
+
+			IsPreloadingRewardedVideo = false;
+			RewardedVideoButtonTitle.text = REWARDED_VIDEO_BUTTON_TITLE_PRELOAD;
+
 			AppLovin.ShowRewardedInterstitial ();
 		} else {
-			Log ("Loading rewarded ad...");
+
+			Log ("Preloading rewarded ad...");
+
+			IsPreloadingRewardedVideo = true;
+			RewardedVideoButtonTitle.text = REWARDED_VIDEO_BUTTON_TITLE_LOADING;
+
 			AppLovin.LoadRewardedInterstitial ();
 		}
 	}
 
 	public void ShowBanner ()
 	{
+		Log ("Showing banner ad");
 		AppLovin.SetAdPosition (AppLovin.AD_POSITION_CENTER, AppLovin.AD_POSITION_BOTTOM);
 		AppLovin.ShowAd ();
 	}
@@ -61,6 +85,10 @@ public class MainMenu : MonoBehaviour
 	{
 		// Log AppLovin event
 		Log (ev);
+
+		//
+		// Special Handling for Rewarded events
+		//
 
 		if (ev.Contains ("REWARD")) {
 			if (ev.Equals ("REWARDAPPROVEDINFO")) {
@@ -80,11 +108,22 @@ public class MainMenu : MonoBehaviour
 				Log ("Rewarded " + amount + " " + currencyName);
 			}
 		}
+		// Check if this is a Rewarded Video preloading event
+		else if (IsPreloadingRewardedVideo && (ev.Equals ("LOADED") || ev.Equals ("LOADFAILED"))) {
+
+			IsPreloadingRewardedVideo = false;
+
+			if (ev.Equals ("LOADED")) {
+				RewardedVideoButtonTitle.text = REWARDED_VIDEO_BUTTON_TITLE_SHOW;
+			} else {
+				RewardedVideoButtonTitle.text = REWARDED_VIDEO_BUTTON_TITLE_PRELOAD;
+			}
+		}
 	}
 
 	private void Log (string message)
 	{
-		StatusText.text = message;  
+		StatusText.text = message;
 		Debug.Log (message);
 	}
 }
