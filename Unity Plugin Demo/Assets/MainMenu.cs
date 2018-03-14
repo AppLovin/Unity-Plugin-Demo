@@ -77,8 +77,7 @@ public class MainMenu : MonoBehaviour
 	public void ShowBanner ()
 	{
 		Log ("Showing banner ad");
-		AppLovin.SetAdPosition (AppLovin.AD_POSITION_CENTER, AppLovin.AD_POSITION_BOTTOM);
-		AppLovin.ShowAd ();
+		AppLovin.ShowAd (AppLovin.AD_POSITION_CENTER, AppLovin.AD_POSITION_BOTTOM);
 	}
 
 	private void onAppLovinEventReceived (string ev)
