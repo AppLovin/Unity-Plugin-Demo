@@ -14,7 +14,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 	// Put AppLovin SDK Key here or in your AndroidManifest.xml / Info.plist
-	private const string SDK_KEY = "";
+	private const string SDK_KEY = "YOUR_SDK_KEY_HERE";
 
 	// Rewarded Video Button Texts
 	private const string REWARDED_VIDEO_BUTTON_TITLE_PRELOAD = "Preload Rewarded Video";
