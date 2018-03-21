@@ -36,13 +36,17 @@ public class MainMenu : MonoBehaviour
 		StatusText = GameObject.Find ("StatusText").GetComponent<Text> ();
 		StatusText.text = "";
 
-		// Set SDK key and initialize SDK
-		AppLovin.SetSdkKey (SDK_KEY);
-		AppLovin.InitializeSdk ();
-		AppLovin.SetTestAdsEnabled ("true");
-		AppLovin.SetVerboseLoggingOn ("true"); // TODO: Remove
-		AppLovin.SetUnityAdListener ("MainMenu");
-		AppLovin.SetRewardedVideoUsername ("demo_user");
+		// Check if user replaced the SDK key
+		if ("YOUR_SDK_KEY_HERE".Equals (SDK_KEY)) {
+			StatusText.text = "ERROR: PLEASE UPDATE YOUR SDK KEY IN Assets/MainMenu.cs";
+		} else {
+			// Set SDK key and initialize SDK
+			AppLovin.SetSdkKey (SDK_KEY);
+			AppLovin.InitializeSdk ();
+			AppLovin.SetTestAdsEnabled ("true");
+			AppLovin.SetUnityAdListener ("MainMenu");
+			AppLovin.SetRewardedVideoUsername ("demo_user");
+		}
 	}
 
 	public void ShowInterstitial ()
