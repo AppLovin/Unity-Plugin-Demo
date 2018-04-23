@@ -111,10 +111,10 @@ public class AppLovin
 		private static extern bool _AppLovinHasUserConsent ();
 
 		[DllImport ("__Internal")]
-		private static extern void _AppLovinSetUserIsCOPPA (string userIsCOPPA);
+		private static extern void _AppLovinSetIsAgeRestrictedUser (string isAgeRestrictedUser);
 
 		[DllImport ("__Internal")]
-		private static extern bool _AppLovinIsUserCOPPA ();
+		private static extern bool _AppLovinIsAgeRestrictedUser ();
 	#endif
 
 	#if UNITY_ANDROID
@@ -590,27 +590,27 @@ public class AppLovin
 	#endif
 	}
 
-	private void setUserIsCOPPA(string userIsCOPPA)
+	private void setIsAgeRestrictedUser(string isAgeRestrictedUser)
 	{
 	#if !UNITY_EDITOR
 		#if UNITY_ANDROID
-			applovinFacade.CallStatic("SetUserIsCoppa", userIsCOPPA, currentActivity);
+			applovinFacade.CallStatic("SetIsAgeRestrictedUser", isAgeRestrictedUser, currentActivity);
 		#endif
 
 		#if UNITY_IPHONE
-			_AppLovinSetUserIsCOPPA(userIsCOPPA);
+			_AppLovinSetIsAgeRestrictedUser(isAgeRestrictedUser);
 		#endif
 	#endif
 	}
 
-	private bool isUserCOPPA()
+	private bool isAgeRestrictedUser()
 	{
 	#if !UNITY_EDITOR
 		#if UNITY_ANDROID
-			string isUserCoppaStr = applovinFacade.CallStatic<string>("IsUserCoppa", currentActivity);
-			return System.Boolean.Parse(isUserCoppaStr);
+			string isAgeRestrictedUserStr = applovinFacade.CallStatic<string>("IsAgeRestrictedUser", currentActivity);
+			return System.Boolean.Parse(isAgeRestrictedUserStr);
 		#elif UNITY_IPHONE
-			return _AppLovinIsUserCOPPA();
+			return _AppLovinIsAgeRestrictedUser();
 		#else
 			return false;
 		#endif
@@ -900,20 +900,20 @@ public class AppLovin
 	}
 
 	/**
- 	 * Mark user as one that falls under protection of the USA Children's Online Privacy Protection Act (COPPA).
+ 	 * Mark user as age restricted (i.e. under 16).
  	 *
- 	 * @param userIsCOPPA "true" if the user falls under protection of COPPA. "false" by default.
+ 	 * @param isAgeRestrictedUser "true" if the user is age restricted (i.e. under 16).
  	 */
-	public static void SetUserIsCOPPA (string userIsCOPPA)
+	public static void SetIsAgeRestrictedUser (string isAgeRestrictedUser)
 	{
-		getDefaultPlugin().setUserIsCOPPA(userIsCOPPA);
+		getDefaultPlugin().setIsAgeRestrictedUser(isAgeRestrictedUser);
 	}
 
 	/**
- 	 * Check if user falls under protection of the USA Children's Online Privacy Protection Act (COPPA).
+ 	 * Check if user is age restricted.
  	 */
-	public static bool IsUserCOPPA ()
+	public static bool IsAgeRestrictedUser ()
 	{
-		return getDefaultPlugin().isUserCOPPA();
+		return getDefaultPlugin().isAgeRestrictedUser();
 	}
 }

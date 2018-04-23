@@ -18,7 +18,7 @@ AL_ASSUME_NONNULL_BEGIN
 /**
  * Set whether or not user has provided consent for information sharing with AppLovin.
  *
- * @param hasUserConsent 'true' if the user has provided consent for information sharing with AppLovin. 'false' by default.
+ * @param hasUserConsent 'YES' if the user has provided consent for information sharing with AppLovin. 'false' by default.
  */
 + (void)setHasUserConsent:(BOOL)hasUserConsent;
 
@@ -28,16 +28,16 @@ AL_ASSUME_NONNULL_BEGIN
 + (BOOL)hasUserConsent;
 
 /**
- * Mark user as one that falls under protection of the USA Children's Online Privacy Protection Act (COPPA).
+ * Mark user as age restricted (i.e. under 16).
  *
- * @param userIsCOPPA 'true' if the user falls under protection of COPPA. 'false' by default.
+ * @param isAgeRestrictedUser 'YES' if the user is age restricted (i.e. under 16).
  */
-+ (void)setUserIsCOPPA:(BOOL)userIsCOPPA;
++ (void)setIsAgeRestrictedUser:(BOOL)isAgeRestrictedUser;
 
 /**
- * Check if user falls under protection of the USA Children's Online Privacy Protection Act (COPPA).
+ * Check if user is age restricted.
  */
-+ (BOOL)isUserCOPPA;
++ (BOOL)isAgeRestrictedUser;
 
 
 - (instancetype)init NS_UNAVAILABLE;

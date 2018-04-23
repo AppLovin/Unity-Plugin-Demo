@@ -618,15 +618,15 @@ extern "C" {
         return [ALPrivacySettings hasUserConsent];
     }
     
-    void _AppLovinSetUserIsCOPPA(const char *userIsCOPPA)
+    void _AppLovinSetIsAgeRestrictedUser(const char *isAgeRestrictedUser)
     {
-        NSString *userIsCOPPAString = [NSString stringWithUTF8String: userIsCOPPA];
-        [ALPrivacySettings setUserIsCOPPA: [userIsCOPPAString boolValue]];
+        NSString *isAgeRestrictedUserString = [NSString stringWithUTF8String: isAgeRestrictedUser];
+        [ALPrivacySettings setIsAgeRestrictedUser: [isAgeRestrictedUserString boolValue]];
     }
     
-    bool _AppLovinIsUserCOPPA()
+    bool _AppLovinIsAgeRestrictedUser()
     {
-        return [ALPrivacySettings isUserCOPPA];
+        return [ALPrivacySettings isAgeRestrictedUser];
     }
 }
 
