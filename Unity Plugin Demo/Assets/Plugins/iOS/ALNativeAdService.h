@@ -43,25 +43,13 @@ AL_ASSUME_NONNULL_BEGIN
  */
 - (void)precacheResourcesForNativeAd:(ALNativeAd *)ad andNotify:(alnullable id <ALNativeAdPrecacheDelegate>)delegate;
 
-/**
- * Pre-load an ad for a given zone in the background, if one is not already available.
- *
- * @param  zoneIdentifier  Identifier representing the zone for the ad to cache.
- */
-- (void)preloadAdForZoneIdentifier:(NSString *)zoneIdentifier;
-
-/**
- * Check whether an ad for a given zone is pre-loaded and ready to be displayed.
- *
- * @param zoneIdentifier  Zone for the ad to check for.
- *
- * @return YES if an ad for this zone is pre-loaded and ready to display without further network activity. NO if requesting an ad for this zone would require fetching over the network.
- */
-- (BOOL)hasPreloadedAdForZoneIdentifier:(NSString *)zoneIdentifier;
-
-
 - (instancetype)init __attribute__((unavailable("Don't instantiate ALNativeAdService, access one via [sdk nativeAdService] instead.")));
 
+@end
+
+@interface ALNativeAdService(ALDeprecated)
+- (void)preloadAdForZoneIdentifier:(NSString *)zoneIdentifier __deprecated_msg("Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALNativeAdService loadNativeAdGroupOfCount:andNotify:] or [ALNativeAdService loadNativeAdGroupOfCount:forZoneIdentifier:andNotify:] to load ads.");
+- (BOOL)hasPreloadedAdForZoneIdentifier:(NSString *)zoneIdentifier __deprecated_msg("Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALNativeAdService loadNextAd:andNotify:] or [ALNativeAdService loadNativeAdGroupOfCount:forZoneIdentifier:andNotify:] to load ads.");
 @end
 
 AL_ASSUME_NONNULL_END

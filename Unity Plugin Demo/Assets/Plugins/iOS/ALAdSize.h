@@ -73,24 +73,15 @@ AL_ASSUME_NONNULL_BEGIN
  */
 + (ALAdSize *)sizeLeader;
 
-/**
- *  Retrieve an <code>NSArray</code> of all available ad size singleton instances.
- *
- *  @return [NSArray arrayWithObjects: [ALAdSize sizeBanner], [ALAdSize sizeInterstitial], ..., nil];
- */
-+ (NSArray *)allSizes __deprecated_msg("Retrieval of all sizes is deprecated and will be removed in a future SDK version.");
-
-// ----------------------------------------------------
-
-// These are no longer recommended or considered best practice.
-// If possible, use a size like [ALAdSize sizeBanner] or [ALAdSize sizeInterstitial] instead.
-@property (assign, nonatomic) NSUInteger width __deprecated;
-@property (assign, nonatomic) NSUInteger height __deprecated;
-
-+ (ALAdSize *)sizeWithLabel:(NSString *)label orDefault:(ALAdSize *)defaultSize __deprecated_msg("Custom ad sizes are no longer supported; use an existing singleton size like [ALAdSize sizeBanner]");
-
 - (id)init __attribute__((unavailable("Do not alloc-init your own instances; use an existing singleton size like [ALAdSize sizeBanner]")));
 
+@end
+
+@interface ALAdSize(ALDeprecated)
+@property (assign, nonatomic) NSUInteger width __deprecated;
+@property (assign, nonatomic) NSUInteger height __deprecated;
++ (NSArray *)allSizes __deprecated_msg("Retrieval of all sizes is deprecated and will be removed in a future SDK version.");
++ (ALAdSize *)sizeWithLabel:(NSString *)label orDefault:(ALAdSize *)defaultSize __deprecated_msg("Custom ad sizes are no longer supported; use an existing singleton size like [ALAdSize sizeBanner]");
 @end
 
 AL_ASSUME_NONNULL_END

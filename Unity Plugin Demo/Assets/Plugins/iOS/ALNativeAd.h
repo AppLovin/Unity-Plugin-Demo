@@ -68,11 +68,6 @@ AL_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic, readonly, alnullable) NSURL *videoURL;
 
 /**
- *  The impression tracking URL of the native ad.
- */
-@property (strong, nonatomic, readonly) NSURL *impressionTrackingURL __deprecated_msg("Invoke method -trackImpression or -trackImpressionAndNotify: rather than firing this URL yourself.");
-
-/**
  *  Fires the impression asynchronously.
  */
 - (void)trackImpression;
@@ -81,11 +76,6 @@ AL_ASSUME_NONNULL_BEGIN
  *  Fires the impression asynchronously and notifies the provided delegate.
  */
 - (void)trackImpressionAndNotify:(alnullable id<ALPostbackDelegate>)postbackDelegate;
-
-/**
- *  The click URL the native ad redirects to.
- */
-@property (strong, nonatomic, readonly, alnullable) NSURL *clickURL __deprecated_msg("Invoke method -launchClickTarget rather than opening this URL yourself.");
 
 /**
  *  The video begin tracking URL of the native ad.
@@ -122,6 +112,11 @@ AL_ASSUME_NONNULL_BEGIN
  */
 - (void)launchClickTarget;
 
+@end
+
+@interface ALNativeAd(ALDeprecated)
+@property (strong, nonatomic, readonly, alnullable) NSURL *clickURL __deprecated_msg("Invoke method -launchClickTarget rather than opening this URL yourself.");
+@property (strong, nonatomic, readonly) NSURL *impressionTrackingURL __deprecated_msg("Invoke method -trackImpression or -trackImpressionAndNotify: rather than firing this URL yourself.");
 @end
 
 AL_ASSUME_NONNULL_END

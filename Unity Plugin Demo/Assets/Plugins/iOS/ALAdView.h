@@ -76,11 +76,6 @@ AL_ASSUME_NONNULL_BEGIN
 @property (assign, atomic, getter=isAutoloadEnabled, setter=setAutoloadEnabled:) BOOL shouldAutoload;
 
 /**
- *  The UIViewController in whose view this ALAdView is placed.
- */
-@property (strong, atomic, alnullable) UIViewController *parentController __deprecated_msg("This property is deprecated and will be removed in a future SDK version.");
-
-/**
  * @name Loading and Rendering Ads
  */
 
@@ -91,26 +86,11 @@ AL_ASSUME_NONNULL_BEGIN
 - (void)loadNextAd;
 
 /**
- * Check if the next ad is currently ready to display.
- *
- * @return YES if a subsequent call to a show method will result in an immediate display. NO if a call to a show method will require network activity first.
- */
-@property (readonly, atomic, getter=isReadyForDisplay) BOOL readyForDisplay;
-
-/**
  * Render a specific ad that was loaded via ALAdService.
  *
  * @param ad Ad to render. Must not be nil.
  */
 - (void)render:(ALAd *)ad;
-
-/**
- * Render a specific ad that was loaded via ALAdService.
- *
- * @param ad          Ad to render. Must not be nil.
- * @param placement   Name of the placement over which the ad is rendered. May be null
- */
-- (void)render:(ALAd *)ad overPlacement:(alnullable NSString *)placement __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");;
 
 /**
  * @name Initialization
@@ -168,6 +148,12 @@ AL_ASSUME_NONNULL_BEGIN
  */
 @interface ALAdView : UIView <ALAdViewProtocol>
 
+@end
+
+@interface ALAdView(ALDeprecated)
+@property (strong, atomic, alnullable) UIViewController *parentController __deprecated_msg("This property is deprecated and will be removed in a future SDK version.");
+- (void)render:(ALAd *)ad overPlacement:(alnullable NSString *)placement __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
+@property (readonly, atomic, getter=isReadyForDisplay) BOOL readyForDisplay __deprecated_msg("Checking whether an ad is ready for display has been deprecated and will be removed in a future SDK version. Please use `loadNextAd` or `renderAd:` to display an ad.");
 @end
 
 AL_ASSUME_NONNULL_END

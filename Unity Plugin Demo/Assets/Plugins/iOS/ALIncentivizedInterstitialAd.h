@@ -87,32 +87,6 @@ AL_ASSUME_NONNULL_BEGIN
 + (void)showAndNotify:(alnullable id <ALAdRewardDelegate>)adRewardDelegate;
 
 /**
- * Show an incentivized interstitial over the current key window, using the most recently pre-loaded ad.
- *
- * You must call preloadAndNotify before calling showOver.
- *
- * @param placement Placement to show the app over
- */
-+ (void)showOverPlacement:(alnullable NSString *)placement
-__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");;
-
-/**
- * Show an incentivized interstitial over the current key window, using the most recently pre-loaded ad.
- *
- * You must call preloadAndNotify before calling showOver.
- *
- * Using the ALAdRewardDelegate, you will be able to verify with AppLovin servers the the video view is legitimate,
- * as we will confirm whether the specific ad was actually served - then we will ping your server with a url for you to update
- * the user's balance. The Reward Validation Delegate will tell you whether we were able to reach our servers or not. If you receive
- * a successful response, you should refresh the user's balance from your server. For more info, see the documentation.
- *
- * @param adRewardDelegate The reward delegate to notify upon validating reward authenticity with AppLovin.
- * @param placement Placement to show the app over
- */
-+ (void)showOverPlacement:(alnullable NSString *)placement andNotify:(alnullable id <ALAdRewardDelegate>)adRewardDelegate
-__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");;
-
-/**
  * Show an incentivized interstitial, using the most recently pre-loaded ad.
  *
  * You must call preloadAndNotify before calling showOver.
@@ -127,23 +101,6 @@ __deprecated_msg("Placements have been deprecated and will be removed in a futur
  *
  */
 + (void)showOver:(UIWindow *)window andNotify:(alnullable id <ALAdRewardDelegate>)adRewardDelegate;
-
-/**
- * Show an incentivized interstitial, using the most recently pre-loaded ad.
- *
- * You must call preloadAndNotify before calling showOver.
- *
- * Using the ALAdRewardDelegate, you will be able to verify with AppLovin servers the the video view is legitimate,
- * as we will confirm whether the specific ad was actually served - then we will ping your server with a url for you to update
- * the user's balance. The Reward Validation Delegate will tell you whether we were able to reach our servers or not. If you receive
- * a successful response, you should refresh the user's balance from your server. For more info, see the documentation.
- *
- * @param adRewardDelegate The reward delegate to notify upon validating reward authenticity with AppLovin.
- * @param window The UIWindow over which the rewarded video should be displayed.
- * @param placement Placement to show the app over
- */
-+ (void)showOver:(UIWindow *)window placement:(alnullable NSString *)placement andNotify:(alnullable id <ALAdRewardDelegate>)adRewardDelegate
-__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
 
 #pragma mark - Integration, Instance Methods
 
@@ -253,9 +210,6 @@ __deprecated_msg("Placements have been deprecated and will be removed in a futur
  */
 - (void)showOver:(UIWindow *)window renderAd:(ALAd *)ad andNotify:(alnullable id <ALAdRewardDelegate>)adRewardDelegate;
 
-- (void)showOver:(UIWindow *)window placement:(alnullable NSString *)placement andNotify:(alnullable id <ALAdRewardDelegate>)adRewardDelegate
-__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
-
 /**
  * Dismiss an incentivized interstitial prematurely, before video playback has completed.
  *
@@ -283,9 +237,21 @@ __deprecated_msg("Placements have been deprecated and will be removed in a futur
  */
 + (alnullable NSString *)userIdentifier;
 
-- (instancetype)init __attribute__((unavailable("Use initWithSdk:, initWithZoneIdentifier:, or [ALIncentivizedInterstitialAd shared] instead.")));
-- (instancetype)initIncentivizedInterstitialWithSdk:(ALSdk *)sdk __deprecated_msg("Use initWithSdk:, initWithZoneIdentifier: or [ALIncentivizedInterstitialAd shared] instead.");
 
+- (instancetype)init __attribute__((unavailable("Use initWithSdk:, initWithZoneIdentifier:, or [ALIncentivizedInterstitialAd shared] instead.")));
+
+@end
+
+@interface ALIncentivizedInterstitialAd(ALDeprecated)
++ (void)showOverPlacement:(alnullable NSString *)placement
+__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
++ (void)showOverPlacement:(alnullable NSString *)placement andNotify:(alnullable id <ALAdRewardDelegate>)adRewardDelegate
+__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
++ (void)showOver:(UIWindow *)window placement:(alnullable NSString *)placement andNotify:(alnullable id <ALAdRewardDelegate>)adRewardDelegate
+__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
+- (void)showOver:(UIWindow *)window placement:(alnullable NSString *)placement andNotify:(alnullable id <ALAdRewardDelegate>)adRewardDelegate
+__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
+- (instancetype)initIncentivizedInterstitialWithSdk:(ALSdk *)sdk __deprecated_msg("Use initWithSdk:, initWithZoneIdentifier: or [ALIncentivizedInterstitialAd shared] instead.");
 @end
 
 AL_ASSUME_NONNULL_END

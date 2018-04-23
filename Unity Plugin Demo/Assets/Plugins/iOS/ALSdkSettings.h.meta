@@ -1,22 +1,29 @@
 fileFormatVersion: 2
-guid: 6d43f592f21794648930b2e7c2ddbd45
-timeCreated: 1515549058
+guid: a1df52d2581984f9a976632b8f73ce0f
+timeCreated: 1524510751
 licenseType: Free
 PluginImporter:
-  serializedVersion: 1
+  externalObjects: {}
+  serializedVersion: 2
   iconMap: {}
   executionOrder: {}
   isPreloaded: 0
   isOverridable: 0
   platformData:
-    Any:
+  - first:
+      Any: 
+    second:
       enabled: 0
       settings: {}
-    Editor:
+  - first:
+      Editor: Editor
+    second:
       enabled: 0
       settings:
         DefaultValueInitialized: true
-    iOS:
+  - first:
+      iPhone: iOS
+    second:
       enabled: 1
       settings: {}
   userData: 

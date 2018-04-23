@@ -44,6 +44,12 @@ AL_ASSUME_NONNULL_BEGIN
 @property (assign, readonly, getter=isVideoAd) BOOL videoAd;
 
 /**
+ * Get an arbitrary ad value for a given key. The list of keys may be found
+ * in AppLovin documentation online.
+ */
+- (alnullable NSString *)adValueForKey:(NSString *)key;
+
+/**
  * @name Ad Identification
  */
 
@@ -54,10 +60,11 @@ AL_ASSUME_NONNULL_BEGIN
  */
 @property (strong, nonatomic, readonly) NSNumber *adIdNumber;
 
-// These property aliases are left for backwards compatibility only, and should no longer be used.
+@end
+
+@interface ALAd (ALDeprecated)
 @property (strong, readonly, getter=size, alnullable) ALAdSize *adSize __deprecated_msg("Use size property instead.");
 @property (strong, readonly, getter=type, alnullable) ALAdType *adType __deprecated_msg("Use type property instead.");
-
 @end
 
 AL_ASSUME_NONNULL_END

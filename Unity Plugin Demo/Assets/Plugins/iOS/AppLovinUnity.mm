@@ -13,6 +13,7 @@
 #import "ALAdType.h"
 #import "ALManagedLoadDelegate.h"
 #import "ALEventTypes.h"
+#import "ALPrivacySettings.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -26,8 +27,8 @@ NSString * kDefaultZoneIdForIncentInterstitial = @"zone_id_incent_interstitial";
 // When native code plugin is implemented in .mm / .cpp file, then functions
 // should be surrounded with extern "C" block to conform C function naming rules
 extern "C" {
-    static const NSString * UNITY_PLUGIN_VERSION = @"4.6.0";
-    static const NSString * UNITY_BUILD_NUMBER = @"40600";
+    static const NSString * UNITY_PLUGIN_VERSION = @"5.0.0";
+    static const NSString * UNITY_BUILD_NUMBER = @"50000";
     
     static const CGFloat POSITION_CENTER = -10000;
     static const CGFloat POSITION_LEFT = -20000;
@@ -602,6 +603,30 @@ extern "C" {
         {
             return kDefaultZoneIdForIncentInterstitial;
         }
+    }
+    
+#pragma mark - User Privacy
+    
+    void _AppLovinSetHasUserConsent(const char *hasUserConsent)
+    {
+        NSString *hasUserConsentString = [NSString stringWithUTF8String: hasUserConsent];
+        [ALPrivacySettings setHasUserConsent: [hasUserConsentString boolValue]];
+    }
+    
+    bool _AppLovinHasUserConsent()
+    {
+        return [ALPrivacySettings hasUserConsent];
+    }
+    
+    void _AppLovinSetUserIsCOPPA(const char *userIsCOPPA)
+    {
+        NSString *userIsCOPPAString = [NSString stringWithUTF8String: userIsCOPPA];
+        [ALPrivacySettings setUserIsCOPPA: [userIsCOPPAString boolValue]];
+    }
+    
+    bool _AppLovinIsUserCOPPA()
+    {
+        return [ALPrivacySettings isUserCOPPA];
     }
 }
 

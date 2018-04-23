@@ -33,26 +33,15 @@ AL_ASSUME_NONNULL_BEGIN
 @property (assign, atomic) BOOL isVerboseLogging;
 
 /**
- * Comma-separated list of sizes to automatically preload. For example: "BANNER,INTER"
- * <p>
- * Auto preloading is enabled for <code>BANNER,INTER</code> by default.
- * To disable outright, set to "NONE".
- */
-@property (strong, atomic) NSString *autoPreloadAdSizes;
-
-/**
- * Comma-separated list of sizes to automatically preload. For example: "REGULAR,INCENTIVIZED"
- * <p>
- * Auto preloading is enabled for <code>REGULAR,INCENTIVIZED</code> by default.
- * To disable outright, set to "NONE".
- */
-@property (strong, atomic) NSString *autoPreloadAdTypes;
-
-/**
  * Determines whether to begin video ads in a muted state or not. Defaults to YES unless changed in the dashboard.
  */
 @property (assign, atomic) BOOL muted;
 
+@end
+
+@interface ALSdkSettings(ALDeprecated)
+@property (copy, atomic) NSString *autoPreloadAdSizes __deprecated_msg("Manually managing what ads SDK should automatically preload has been deprecated and will be removed in a future SDK version.");
+@property (copy, atomic) NSString *autoPreloadAdTypes __deprecated_msg("Manually managing what ads SDK should automatically preload has been deprecated and will be removed in a future SDK version.");
 @end
 
 AL_ASSUME_NONNULL_END

@@ -16,12 +16,12 @@
 
 #import "ALAnnotations.h"
 #import "ALErrorCodes.h"
+#import "ALMediationProvider.h"
 
 AL_ASSUME_NONNULL_BEGIN
 
 /**
  * This is a base class for the AppLovin iOS SDK.
- *
  */
 @interface ALSdk : NSObject
 
@@ -40,14 +40,19 @@ AL_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic, readonly) ALSdkSettings *settings;
 
 /**
- * Set Plugin version.
+ * Set plugin version.
  *
  * This is mainly used internally, however if you've written a mediation adaptor or plugin,
- * you can set this. Common examples include things like "Bob's Cocos2D Plugin v1.0".
+ * you can set this. Common examples include things like "Cocos2D Plugin v1.0".
  *
- * @param version Some descriptive string which identifies the plugin.
+ * @param pluginVersion Some descriptive string which identifies the plugin.
  */
-- (void)setPluginVersion:(NSString *)version;
+- (void)setPluginVersion:(NSString *)pluginVersion;
+
+/**
+ * Set mediation provider using one of the provided strings in ALMediationProvider.h, or your own if not defined.
+ */
+@property (atomic, copy, alnullable) NSString *mediationProvider;
 
 /**
  * @name SDK Information

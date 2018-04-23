@@ -8,6 +8,9 @@
 
 // Loading & Displaying Ads
 
+// Indicates that the SDK is currently disabled.
+#define kALErrorCodeSdkDisabled -22
+
 // Indicates that no ads are currently eligible for your device & location.
 #define kALErrorCodeNoFill 204
 
@@ -25,6 +28,9 @@
 
 // Indicates that the zone provided is invalid; the zone needs to be added to your AppLovin account.
 #define kALErrorCodeInvalidZone -7
+
+// Indicates that the provided ad token is invalid; ad token must be returned from AppLovin S2S integration.
+#define kALErrorCodeInvalidAdToken -8
 
 // Indicates that an attempt to cache a resource to the filesystem failed; the device may be out of space.
 #define kALErrorCodeUnableToPrecacheResources -200
