@@ -27,8 +27,8 @@ NSString * kDefaultZoneIdForIncentInterstitial = @"zone_id_incent_interstitial";
 // When native code plugin is implemented in .mm / .cpp file, then functions
 // should be surrounded with extern "C" block to conform C function naming rules
 extern "C" {
-    static const NSString * UNITY_PLUGIN_VERSION = @"5.0.0";
-    static const NSString * UNITY_BUILD_NUMBER = @"50000";
+    static const NSString * UNITY_PLUGIN_VERSION = @"5.0.1";
+    static const NSString * UNITY_BUILD_NUMBER = @"50001";
     
     static const CGFloat POSITION_CENTER = -10000;
     static const CGFloat POSITION_LEFT = -20000;
