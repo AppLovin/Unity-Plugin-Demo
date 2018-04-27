@@ -21,7 +21,13 @@ public class BuildPostProcessor
 			// Add `-ObjC` to "Other Linker Flags".
 			project.AddBuildProperty(targetGUID, "OTHER_LDFLAGS", "-ObjC");
 
-			// Write.
+			// Add frameworks
+			project.AddFrameworkToProject(targetGUID, "AdSupport.framework", false);
+			project.AddFrameworkToProject(targetGUID, "CoreTelephony.framework", false);
+			project.AddFrameworkToProject(targetGUID, "StoreKit.framework", false);
+			project.AddFrameworkToProject(targetGUID, "WebKit.framework", false);
+
+			// Write
 			File.WriteAllText(projectPath, project.WriteToString());
 		}
 	}
