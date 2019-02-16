@@ -2,16 +2,13 @@
 //  AppLovinAd.h
 //  sdk
 //
-//  Copyright (c) 2013, AppLovin Corporation. All rights reserved.
-
-
-#import <Foundation/Foundation.h>
-#import "ALAnnotations.h"
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
+//
 
 #import "ALAdSize.h"
 #import "ALAdType.h"
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  This class represents an ad that has been served from the AppLovin server and
@@ -36,12 +33,18 @@ AL_ASSUME_NONNULL_BEGIN
 /**
  *  The zone identifier for the ad, if any.
  */
-@property (copy, nonatomic, readonly, alnullable) NSString *zoneIdentifier;
+@property (copy, nonatomic, readonly, nullable) NSString *zoneIdentifier;
 
 /**
  *  Whether or not the current ad is a video advertisement.
  */
 @property (assign, readonly, getter=isVideoAd) BOOL videoAd;
+
+/**
+ * Get an arbitrary ad value for a given key. The list of keys may be found
+ * in AppLovin documentation online.
+ */
+- (nullable NSString *)adValueForKey:(NSString *)key;
 
 /**
  * @name Ad Identification
@@ -54,10 +57,11 @@ AL_ASSUME_NONNULL_BEGIN
  */
 @property (strong, nonatomic, readonly) NSNumber *adIdNumber;
 
-// These property aliases are left for backwards compatibility only, and should no longer be used.
-@property (strong, readonly, getter=size, alnullable) ALAdSize *adSize __deprecated_msg("Use size property instead.");
-@property (strong, readonly, getter=type, alnullable) ALAdType *adType __deprecated_msg("Use type property instead.");
-
 @end
 
-AL_ASSUME_NONNULL_END
+@interface ALAd (ALDeprecated)
+@property (strong, readonly, getter=size, nullable) ALAdSize *adSize __deprecated_msg("Use size property instead.");
+@property (strong, readonly, getter=type, nullable) ALAdType *adType __deprecated_msg("Use type property instead.");
+@end
+
+NS_ASSUME_NONNULL_END

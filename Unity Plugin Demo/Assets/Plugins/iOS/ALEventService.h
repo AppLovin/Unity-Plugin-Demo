@@ -2,15 +2,13 @@
 //  ALEventService.h
 //  sdk
 //
-//  Created by Matt Szaro on 7/10/15.
 //
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "ALEventTypes.h"
-#import "ALAnnotations.h"
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @name Event Tracking
@@ -37,7 +35,7 @@ AL_ASSUME_NONNULL_BEGIN
  *
  * @param parameters A dictionary containing key-value pairs further describing this event. Particular data points of interest are provided as "suggested keys" in the doc comment for each event type constant in ALEventTypes.h
  */
-- (void)trackEvent:(NSString *)eventType parameters:(alnullable NSDictionary *)parameters;
+- (void)trackEvent:(NSString *)eventType parameters:(nullable NSDictionary *)parameters;
 
 /**
  * Track an in app purchase.
@@ -49,7 +47,7 @@ AL_ASSUME_NONNULL_BEGIN
  * If you pass a value for kALEventParameterStoreKitReceiptKey, it will be used for validation.
  * Otherwise, we will automatically collect [[NSBundle mainBundle] appStoreReceiptURL] and use it for validation.
  */
-- (void)trackInAppPurchaseWithTransactionIdentifier:(NSString *)transactionId parameters:(alnullable NSDictionary *)parameters;
+- (void)trackInAppPurchaseWithTransactionIdentifier:(NSString *)transactionId parameters:(nullable NSDictionary *)parameters;
 
 /**
  * Track a checkout / standard purchase.
@@ -58,10 +56,11 @@ AL_ASSUME_NONNULL_BEGIN
  *
  * @param parameters A dictionary containing key-value pairs further describing this event. You should provide, at a minimum, kALEventParameterRevenueAmountKey and kALEventParameterRevenueCurrencyKey. We also recommend passing kALEventParameterProductIdentifierKey.
  */
-- (void)trackCheckoutWithTransactionIdentifier:(alnullable NSString *)transactionId parameters:(alnullable NSDictionary *)parameters;
+- (void)trackCheckoutWithTransactionIdentifier:(nullable NSString *)transactionId parameters:(nullable NSDictionary *)parameters;
 
-- (id)init __attribute__((unavailable("Don't instantiate ALEventService, access one via [sdk eventService] instead.")));
+
+- (instancetype)init __attribute__((unavailable("Access ALEventService through ALSdk's eventService property.")));
 
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

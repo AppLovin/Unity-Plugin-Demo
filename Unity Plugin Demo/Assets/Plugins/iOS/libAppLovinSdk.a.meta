@@ -1,7 +1,5 @@
 fileFormatVersion: 2
-guid: 5b22d8373058b4126abac53311d18268
-timeCreated: 1515618307
-licenseType: Free
+guid: a89d1729376694193936479697d6e780
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -90,8 +88,9 @@ PluginImporter:
     second:
       enabled: 1
       settings:
-        CompileFlags: 
-        FrameworkDependencies: AdSupport;CoreTelephony;StoreKit;WebKit;
+        AddToEmbeddedBinaries: false
+        CompileFlags: -ObjC -l"libz"
+        FrameworkDependencies: AdSupport;CoreTelephony;StoreKit;SafariServices;WebKit;
   userData: 
   assetBundleName: 
   assetBundleVariant: 

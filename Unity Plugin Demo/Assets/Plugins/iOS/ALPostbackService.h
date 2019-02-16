@@ -2,15 +2,13 @@
 //  ALPostbackService.h
 //  sdk
 //
-//  Created by Matt Szaro on 4/15/15.
 //
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "ALAnnotations.h"
 #import "ALPostbackDelegate.h"
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 @class ALSdk;
 
@@ -27,8 +25,8 @@ AL_ASSUME_NONNULL_BEGIN
  * @param targetURL URL to call via HTTP GET.
  * @param delegate Optional postback delegate. May be nil.
  */
-- (void)dispatchPostbackAsync:(NSURL *)targetURL andNotify:(alnullable id <ALPostbackDelegate>)delegate;
+- (void)dispatchPostbackAsync:(NSURL *)targetURL andNotify:(nullable id<ALPostbackDelegate>)delegate;
 
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

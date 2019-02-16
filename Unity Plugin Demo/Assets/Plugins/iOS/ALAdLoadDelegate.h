@@ -3,14 +3,12 @@
 //  sdk
 //
 //  Created by Basil on 3/23/12.
-//  Copyright (c) 2013, AppLovin Corporation. All rights reserved.
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "ALAnnotations.h"
 #import "ALAd.h"
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * This protocol defines a listener for ad load events.
@@ -41,4 +39,4 @@ AL_ASSUME_NONNULL_BEGIN
 
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

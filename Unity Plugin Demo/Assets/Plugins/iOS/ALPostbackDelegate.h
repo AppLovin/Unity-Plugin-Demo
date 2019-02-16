@@ -2,14 +2,11 @@
 //  ALPostbackDelegate
 //  sdk
 //
-//  Created by Matt Szaro on 5/26/15.
 //
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "ALAnnotations.h"
-
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 @class ALPostbackService;
 
@@ -32,8 +29,8 @@ AL_ASSUME_NONNULL_BEGIN
  * @param postbackURL URL which was notified.
  * @param errorCode HTTP status code received, if any; otherwise a negative constant.
  */
-- (void)postbackService:(ALPostbackService *)postbackService didFailToExecutePostback:(alnullable NSURL *)postbackURL errorCode:(NSInteger)errorCode;
+- (void)postbackService:(ALPostbackService *)postbackService didFailToExecutePostback:(nullable NSURL *)postbackURL errorCode:(NSInteger)errorCode;
 
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

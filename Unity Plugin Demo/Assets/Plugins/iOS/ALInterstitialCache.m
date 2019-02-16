@@ -7,9 +7,13 @@
 //
 
 #import "ALInterstitialCache.h"
-#import "ALAd.h"
-#import "ALAdLoadDelegate.h"
 
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALAd.h"
+    #import "ALAdLoadDelegate.h"
+#endif
 
 @interface ALInterstitialCache()
 

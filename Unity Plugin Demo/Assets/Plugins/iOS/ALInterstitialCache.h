@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ALAdLoadDelegate.h"
 #import "ALInterstitialCache.h"
 #import "ALAdDelegateWrapper.h"
 #import "ALManagedLoadDelegate.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALAdLoadDelegate.h"
+#endif
 
 @interface ALInterstitialCache : NSObject
 

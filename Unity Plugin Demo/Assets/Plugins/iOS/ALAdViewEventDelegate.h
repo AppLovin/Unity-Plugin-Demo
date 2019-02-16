@@ -3,15 +3,14 @@
 //  sdk
 //
 //  Created by Thomas So on 6/23/17.
-//
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
 //
 
-#import "ALAnnotations.h"
 #import "ALAd.h"
 
 @class ALAdView;
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  This enum contains possible error codes that should be returned when the ad view fails to display an ad.
@@ -94,4 +93,4 @@ typedef NS_ENUM(NSInteger, ALAdViewDisplayErrorCode)
 
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

@@ -3,16 +3,23 @@
 //  sdk
 //
 
-#import "ALSdk.h"
-#import "ALAdView.h"
-#import "ALInterstitialAd.h"
-#import "ALSdkSettings.h"
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALSdk.h"
+    #import "ALAdView.h"
+    #import "ALInterstitialAd.h"
+    #import "ALSdkSettings.h"
+    #import "ALIncentivizedInterstitialAd.h"
+    #import "ALAdType.h"
+    #import "ALEventTypes.h"
+    #import "ALPrivacySettings.h"
+#endif
+
 #import "ALAdDelegateWrapper.h"
-#import "ALIncentivizedInterstitialAd.h"
 #import "ALInterstitialCache.h"
-#import "ALAdType.h"
 #import "ALManagedLoadDelegate.h"
-#import "ALEventTypes.h"
+#import "ALAppLovinLogger.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -26,8 +33,8 @@ NSString * kDefaultZoneIdForIncentInterstitial = @"zone_id_incent_interstitial";
 // When native code plugin is implemented in .mm / .cpp file, then functions
 // should be surrounded with extern "C" block to conform C function naming rules
 extern "C" {
-    static const NSString * UNITY_PLUGIN_VERSION = @"4.6.0";
-    static const NSString * UNITY_BUILD_NUMBER = @"40600";
+    static const NSString * UNITY_PLUGIN_VERSION = @"6.1.1";
+    static const NSString * UNITY_BUILD_NUMBER = @"60101";
     
     static const CGFloat POSITION_CENTER = -10000;
     static const CGFloat POSITION_LEFT = -20000;
@@ -47,6 +54,8 @@ extern "C" {
     static ALAdView *adView;
     static ALAdDelegateWrapper* delegateWrapper;
     
+    static ALAppLovinLogger *logger;
+    
     /**
      * Helper method definitions
      */
@@ -60,13 +69,13 @@ extern "C" {
 
     void maybeInitializeDelegateWrapper()
     {
-        if(!delegateWrapper) { delegateWrapper = [[ALAdDelegateWrapper alloc] init]; }
+        if(!logger) { logger = [[ALAppLovinLogger alloc] initWithSdk: [ALSdk shared]]; }
+        if(!delegateWrapper) { delegateWrapper = [[ALAdDelegateWrapper alloc] initWithLogger: logger]; }
         if(!interstitialCache) { interstitialCache = [ALInterstitialCache shared]; }
     }
     
-    /**
-     * Initialize the AppLovin SDK manually
-     */
+#pragma mark - SDK Initialization
+    
     void _AppLovinInitializeSdk()
     {
         [[ALSdk shared] initializeSdk];
@@ -81,9 +90,7 @@ extern "C" {
         delegateWrapper.gameObjectToNotify = [NSString stringWithCString: gameObjectToNotify encoding: NSUTF8StringEncoding];
     }
     
-    //
-    // Banner Methods
-    //
+#pragma mark - AdView Methods
 
     ALAdView *SharedAdview()
     {
@@ -107,10 +114,12 @@ extern "C" {
     }
 
     /**
-     *  Show AppLovin Banner Ad
+     *  Show AppLovin Banner or MRec Ad
      */
     void _AppLovinShowAd(const char *zoneId)
     {
+        [logger d: @"Show AppLovin Ad"];
+        
         [SharedAdview() setHidden:false];
         
         if ( zoneId != NULL )
@@ -137,6 +146,8 @@ extern "C" {
      */
     void _AppLovinHideAd()
     {
+        [logger d: @"Hide AppLovin Ad"];
+        
         [SharedAdview() setHidden:true];
     }
 
@@ -263,9 +274,7 @@ extern "C" {
         updateAdPosition();
     }
 
-    //
-    // SDK Settings
-    //
+#pragma mark - SDK Settings
     
     /**
      * Set the AppLovin SDK key for the application
@@ -390,9 +399,7 @@ extern "C" {
         return false;
     }
     
-    //
-    // Incentivized ad loading / showing
-    //
+#pragma mark - Incentivized ad loading / showing
     
     void _AppLovinSetIncentivizedUserName(const char *username)
     {
@@ -508,9 +515,7 @@ extern "C" {
         _AppLovinShowIncentInterstitialForZoneIdAndPlacement( zoneId, NULL );
     }
     
-    //
-    // Analytics
-    //
+#pragma mark - Analytics
     
     NSDictionary* deserializeParameters(const char * serializedParameters)
     {
@@ -555,15 +560,17 @@ extern "C" {
 
         size_t eventCopyLen = strlcpy(eventTypeCopy, eventType, sizeof(eventTypeCopy));
         size_t serializedParamsCopyLen = strlcpy(serializedParametersCopy, serializedParameters, sizeof(serializedParametersCopy));
+        
+        [logger d: @"Tracking event of type %@; parameters: %@", [NSString stringWithCString: eventTypeCopy encoding:NSUTF8StringEncoding], [NSString stringWithCString: serializedParametersCopy encoding: NSUTF8StringEncoding]];
 
         if (eventCopyLen > eventTypeCopySize)
         {
-            NSLog(@"[AppLovinUnity] Event type has been truncated to %@", [NSString stringWithCString: eventTypeCopy encoding: NSUTF8StringEncoding]);
+            [logger d: @"Event type has been truncated to %@", [NSString stringWithCString: eventTypeCopy encoding: NSUTF8StringEncoding]];
         }
 
         if (serializedParamsCopyLen > serializedParametersCopySize)
         {
-            NSLog(@"[AppLovinUnity] Event parameters were too large and have been truncated, large key-value pairs may be dropped...");
+            [logger d: @"Event parameters were too large and have been truncated, large key-value pairs may be dropped..."];
         }
 
         NSDictionary* deserializedParameters = deserializeParameters(serializedParametersCopy);
@@ -602,6 +609,30 @@ extern "C" {
         {
             return kDefaultZoneIdForIncentInterstitial;
         }
+    }
+    
+#pragma mark - User Privacy
+    
+    void _AppLovinSetHasUserConsent(const char *hasUserConsent)
+    {
+        NSString *hasUserConsentString = [NSString stringWithUTF8String: hasUserConsent];
+        [ALPrivacySettings setHasUserConsent: [hasUserConsentString boolValue]];
+    }
+    
+    bool _AppLovinHasUserConsent()
+    {
+        return [ALPrivacySettings hasUserConsent];
+    }
+    
+    void _AppLovinSetIsAgeRestrictedUser(const char *isAgeRestrictedUser)
+    {
+        NSString *isAgeRestrictedUserString = [NSString stringWithUTF8String: isAgeRestrictedUser];
+        [ALPrivacySettings setIsAgeRestrictedUser: [isAgeRestrictedUserString boolValue]];
+    }
+    
+    bool _AppLovinIsAgeRestrictedUser()
+    {
+        return [ALPrivacySettings isAgeRestrictedUser];
     }
 }
 

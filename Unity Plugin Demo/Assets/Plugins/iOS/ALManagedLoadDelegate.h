@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ALAdLoadDelegate.h"
-#import "ALAdView.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALAdLoadDelegate.h"
+    #import "ALAdView.h"
+#endif
 
 @protocol ALUnityTypedLoadFailureDelegate <NSObject>
 

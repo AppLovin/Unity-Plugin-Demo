@@ -8,25 +8,41 @@
 
 #import "ALAdDelegateWrapper.h"
 #import "ALInterstitialCache.h"
-#import "ALErrorCodes.h"
 #import "ALManagedLoadDelegate.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALErrorCodes.h"
+#endif
 
 // Forward declaration - do not modify
 extern void UnitySendMessage(const char *, const char *, const char *);
 
+@interface ALAdDelegateWrapper ()
+@property (nonatomic, weak) ALAppLovinLogger *logger;
+@end
+
 @implementation ALAdDelegateWrapper
 @synthesize isInterstitialShowing, gameObjectToNotify;
 
-const static NSString* methodName = @"onAppLovinEventReceived";
+static NSString *const methodName = @"onAppLovinEventReceived";
+static NSString *const TAG = @"ALAdDelegateWrapper";
 
 -(void) callCSharpWithMessage: (NSString*) message
 {
+    [self.logger d: @"Sending message to Unity/C#: %@", message];
+    
     if(gameObjectToNotify)
     {
         UnitySendMessage([gameObjectToNotify cStringUsingEncoding: NSStringEncodingConversionAllowLossy],
                          [methodName cStringUsingEncoding: NSStringEncodingConversionAllowLossy],
                          [message cStringUsingEncoding: NSStringEncodingConversionAllowLossy]
                          );
+    }
+    else
+    {
+        [self.logger d: @"Skipping sending message to Unity/C#: No GameObject provided."];
     }
 }
 
@@ -49,7 +65,7 @@ const static NSString* methodName = @"onAppLovinEventReceived";
 -(void) adService:(ALAdService *)adService didFailToLoadAdWithError:(int)code
 {
     [self callCSharpWithMessage: @"LOADFAILED"];
-    NSLog(@"[ALAdDelegateWrapper] Non-typed load callback was used from: %@", [NSThread callStackSymbols]);
+    [self.logger d: @"[ALAdDelegateWrapper] Non-typed load callback was used from: %@", [NSThread callStackSymbols]];
 }
 
 -(void) adService: (ALAdService*) adService didFailToLoadAdOfSize:(ALAdSize *)size type:(ALAdType *)type withError:(NSInteger)error
@@ -166,6 +182,18 @@ const static NSString* methodName = @"onAppLovinEventReceived";
 - (void)ad:(ALAd *)ad didFailToDisplayInAdView:(ALAdView *)adView withError:(ALAdViewDisplayErrorCode)code
 {
     [self callCSharpWithMessage: @"DISPLAYFAILED"];
+}
+
+#pragma mark - Initialization
+
+- (instancetype)initWithLogger:(ALAppLovinLogger *)logger
+{
+    self = [super init];
+    if ( self )
+    {
+        self.logger = logger;
+    }
+    return self;
 }
 
 @end

@@ -2,15 +2,13 @@
 //  ALAdRewardDelegate.h
 //  sdk
 //
-//  Created by Matt Szaro on 1/3/14.
 //
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "ALAnnotations.h"
 #import "ALAd.h"
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  This protocol defines a listener for rewarded video events.
@@ -73,4 +71,4 @@ AL_ASSUME_NONNULL_BEGIN
 
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

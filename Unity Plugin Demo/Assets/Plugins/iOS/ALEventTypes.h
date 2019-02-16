@@ -2,16 +2,15 @@
 //  ALEventTypes.h
 //  sdk
 //
-//  Created by Matt Szaro on 7/15/15.
 //
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
 //
 
-#import "ALAnnotations.h"
 
 #ifndef ALEventTypes_h
 #define ALEventTypes_h
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @name Authentication Events
@@ -277,4 +276,4 @@ extern NSString *const kALEventParameterReservationEndDateKey;
 
 #endif
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

@@ -1,81 +1,46 @@
 //
 //  ALInterstitialAd.h
 //
-//  Created by Matt Szaro on 8/1/13.
-//  Copyright (c) 2013, AppLovin Corporation. All rights reserved.
 //
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
+//
+
 #import <UIKit/UIKit.h>
-#import "ALAnnotations.h"
 
 #import "ALSdk.h"
 #import "ALAdService.h"
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  This class is used to display full-screen ads to the user.
+ * This class is used to display full-screen ads to the user.
  */
 @interface ALInterstitialAd : NSObject
 
 #pragma mark - Ad Delegates
 
 /**
- *  An object conforming to the ALAdLoadDelegate protocol, which, if set, will be notified of ad load events.
+ * An object conforming to the ALAdLoadDelegate protocol, which, if set, will be notified of ad load events.
  */
-@property (strong, nonatomic, alnullable) id <ALAdLoadDelegate> adLoadDelegate;
+@property (strong, nonatomic, nullable) id<ALAdLoadDelegate> adLoadDelegate;
 
 /**
- *  An object conforming to the ALAdDisplayDelegate protocol, which, if set, will be notified of ad show/hide events.
+ * An object conforming to the ALAdDisplayDelegate protocol, which, if set, will be notified of ad show/hide events.
  */
-@property (strong, nonatomic, alnullable) id <ALAdDisplayDelegate> adDisplayDelegate;
+@property (strong, nonatomic, nullable) id<ALAdDisplayDelegate> adDisplayDelegate;
 
 /**
- *  An object conforming to the ALAdVideoPlaybackDelegate protocol, which, if set, will be notified of video start/finish events.
+ * An object conforming to the ALAdVideoPlaybackDelegate protocol, which, if set, will be notified of video start/finish events.
  */
-@property (strong, nonatomic, alnullable) id <ALAdVideoPlaybackDelegate> adVideoPlaybackDelegate;
+@property (strong, nonatomic, nullable) id<ALAdVideoPlaybackDelegate> adVideoPlaybackDelegate;
 
 #pragma mark - Loading and Showing Ads, Class Methods
 
 /**
  * Show an interstitial over the application's key window.
  * This will load the next interstitial and display it.
- *
- * Note that this method is functionally equivalent to calling
- * showOver: and passing [[UIApplication sharedApplication] keyWindow].
  */
 + (ALInterstitialAd *)show;
-
-/**
- * Show a new interstitial ad. This method will display an interstitial*
- * over the given UIWindow.
- *
- * @param window  A window to show the interstitial over
- */
-+ (ALInterstitialAd *)showOver:(UIWindow *)window;
-
-/**
- * Show a new interstitial ad. This method will display an interstitial over the
- * key window
- *
- * @param placement  A placement to show the interstitial over
- */
-+ (ALInterstitialAd *)showOverPlacement:(alnullable NSString *)placement __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");;
-
-/**
- * Show a new interstitial ad. This method will display an interstitial*
- * over the given UIWindow.
- *
- * @param window     A window to show the interstitial over
- * @param placement  A placement to show the interstitial over
- */
-+ (ALInterstitialAd *)showOver:(UIWindow *)window placement:(alnullable NSString* )placement __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");;
-
-/**
- * Check if an ad is currently ready to display.
- *
- * @return YES if a subsequent call to a show method will result in an immediate display. NO if a call to a show method will require network activity first.
- */
-+ (BOOL)isReadyForDisplay;
 
 /**
  * Get a reference to the shared singleton instance.
@@ -90,106 +55,43 @@ AL_ASSUME_NONNULL_BEGIN
 /**
  * Show an interstitial over the application's key window.
  * This will load the next interstitial and display it.
- *
- * Note that this method is functionally equivalent to calling
- * showOver: and passing [[UIApplication sharedApplication] keyWindow].
  */
 - (void)show;
 
 /**
- * Show an interstitial over the application's key window.
- * This will load the next interstitial and display it.
- *
- * Note that this method is functionally equivalent to calling
- * showOver: and passing [[UIApplication sharedApplication] keyWindow].
- *
- * @param placement  Placement over which this ad is displayed
- */
-
-- (void)showOverPlacement:(NSString *)placement __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");;
-
-/**
- * Show an interstitial over a given window.
- * @param window An instance of window to show the interstitial over.
- */
-- (void)showOver:(UIWindow *)window;
-
-/**
  * Show current interstitial over a given window and render a specified ad loaded by ALAdService.
  *
- * @param window An instance of window to show the interstitial over.
- * @param ad     The ad to render into this interstitial.
+ * @param ad The ad to render into this interstitial.
  */
-- (void)showOver:(UIWindow *)window andRender:(ALAd *)ad;
-
-/**
- * Show current interstitial over a given window and render a specified ad loaded by ALAdService.
- *
- * @param window     An instance of window to show the interstitial over.
- * @param ad         The ad to render into this interstitial.
- * @param placement  Placement over which this ad is displayed
- */
-- (void)showOver:(UIWindow *)window placement:(alnullable NSString *)placement andRender:(ALAd *)ad __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");;
-
-/**
- * Check if an ad is currently ready to display.
- *
- * @return YES if a subsequent call to a show method will result in an immediate display. NO if a call to a show method will require network activity first.
- */
-@property (readonly, atomic, getter=isReadyForDisplay) BOOL readyForDisplay;
-
-#pragma mark - Dismissing Interstitials Expliticly
-
-/**
- * Dismiss this interstitial.
- *
- * In general, this is not recommended as it negatively impacts click through rate.
- */
-- (void)dismiss;
+- (void)showAd:(ALAd *)ad;
 
 #pragma mark - Initialization
 
 /**
- * Init this interstitial ad with a custom SDK instance.
+ * Initialize an instance of this class with a SDK instance.
  *
- * To simply display an interstitial, use [ALInterstitialAd showOver:window]
- *
- * @param sdk Instance of AppLovin SDK to use.
+ * @param sdk The AppLovin SDK instance to use.
  */
 - (instancetype)initWithSdk:(ALSdk *)sdk;
-- (instancetype)initInterstitialAdWithSdk:(ALSdk *)sdk __deprecated_msg("Use initWithSdk instead.");
-
-/**
- * Init this interstitial ad with a custom SDK instance and frame.
- *
- * To simply display an interstitial, use [ALInterstitialAd showOver:window].
- * In general, setting a custom frame is not recommended, unless absolutely necessary.
- * Interstitial ads are intended to be full-screen and may not look right if sized otherwise.
- *
- * @param frame Frame to use with the new interstitial.
- * @param sdk   Instance of AppLovin SDK to use.
- */
-- (instancetype)initWithFrame:(CGRect)frame sdk:(ALSdk *)sdk;
-
-#pragma mark - Advanced Configuration
-
-/**
- *  Frame to be passed through to the descendent UIView containing this interstitial.
- *
- *  Note that this has no effect on video ads, as they are presented in their own view controller.
- */
-@property (assign, nonatomic) CGRect frame;
-
-/**
- *  Hidden setting to be passed through to the descendent UIView containing this interstitial.
- *
- *  Note that this has no effect on video ads, as they are presented in their own view controller.
- */
-@property (assign, nonatomic) BOOL hidden;
-
-
-- (instancetype) init __attribute__((unavailable("Use [ALInterstitialAd shared] or initInterstitialAdWithSdk: instead.")));
 
 @end
 
-AL_ASSUME_NONNULL_END
+@interface ALInterstitialAd (ALDeprecated)
+- (instancetype)initInterstitialAdWithSdk:(ALSdk *)sdk __deprecated_msg("Use initWithSdk: instead.");
+- (void)showOverPlacement:(NSString *)placement __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
++ (ALInterstitialAd *)showOverPlacement:(nullable NSString *)placement __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
+- (void)showOver:(UIWindow *)window placement:(nullable NSString *)placement andRender:(ALAd *)ad __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
++ (ALInterstitialAd *)showOver:(UIWindow *)window placement:(nullable NSString* )placement __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
++ (BOOL)isReadyForDisplay __deprecated_msg("Checking whether an ad is ready for display has been deprecated and will be removed in a future SDK version. Please use `show`, `showOver:` or `showOver:andRender:` to display an ad.");
+@property (readonly, atomic, getter=isReadyForDisplay) BOOL readyForDisplay __deprecated_msg("Checking whether an ad is ready for display has been deprecated and will be removed in a future SDK version. Please use `show`, `showOver:` or `showOver:andRender:` to display an ad.");
+- (instancetype)initWithFrame:(CGRect)frame sdk:(ALSdk *)sdk __deprecated_msg("Initializing with the `frame` property has been deprecated and will be removed in a future SDK version.");
+@property (assign, nonatomic) CGRect frame __deprecated_msg("Setting the `frame` property has no effect. It has been deprecated and will be removed in a future SDK version.");
+@property (assign, nonatomic) BOOL hidden __deprecated_msg("Setting the `hidden` property has no effect. It has been deprecated and will be removed in a future SDK version.");
+- (void)dismiss __deprecated_msg("Dismissing an interstitial while playing negatively affects CPM and is highy discouraged. It is now deprecated and will be removed in a future SDK version.");
++ (ALInterstitialAd *)showOver:(UIWindow *)window __deprecated_msg("Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use show instead.");
+- (void)showOver:(UIWindow *)window __deprecated_msg("Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use show instead.");
+- (void)showOver:(UIWindow *)window andRender:(ALAd *)ad __deprecated_msg("Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use showAd: instead.");
+
+@end
+
+NS_ASSUME_NONNULL_END

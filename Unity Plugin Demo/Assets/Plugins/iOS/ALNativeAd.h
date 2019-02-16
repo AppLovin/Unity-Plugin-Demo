@@ -2,14 +2,13 @@
 //  ALNativeAd.h
 //  sdk
 //
-//  Created by Matt Szaro on 5/21/15.
 //
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "ALPostbackDelegate.h"
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 @interface ALNativeAd : NSObject
 
@@ -23,54 +22,49 @@ AL_ASSUME_NONNULL_BEGIN
 /**
  *  The zone identifier for the ad, if any.
  */
-@property (copy, nonatomic, readonly, alnullable) NSString *zoneIdentifier;
+@property (copy, nonatomic, readonly, nullable) NSString *zoneIdentifier;
 
 /**
  *  The title of the native ad.
  */
-@property (copy, nonatomic, readonly, alnullable) NSString *title;
+@property (copy, nonatomic, readonly, nullable) NSString *title;
 
 /**
  *  The description of the native ad.
  */
-@property (copy, nonatomic, readonly, alnullable) NSString *descriptionText;
+@property (copy, nonatomic, readonly, nullable) NSString *descriptionText;
 
 /**
  *  The caption text of the native ad.
  */
-@property (copy, nonatomic, readonly, alnullable) NSString *captionText;
+@property (copy, nonatomic, readonly, nullable) NSString *captionText;
 
 /**
  *  The CTA text of the native ad.
  */
-@property (copy, nonatomic, readonly, alnullable) NSString *ctaText;
+@property (copy, nonatomic, readonly, nullable) NSString *ctaText;
 
 /**
  *  The app icon URL of the native ad.
  */
-@property (strong, nonatomic, readonly, alnullable) NSURL *iconURL;
+@property (strong, nonatomic, readonly, nullable) NSURL *iconURL;
 
 /**
  *  The ad image URL for a non-video native ad.
  */
-@property (strong, nonatomic, readonly, alnullable) NSURL *imageURL;
+@property (strong, nonatomic, readonly, nullable) NSURL *imageURL;
 
 /**
  *  The star rating of the native ad. Please use floatValue when extracting value from the NSNumber
  */
-@property (strong, nonatomic, readonly, alnullable) NSNumber *starRating;
+@property (strong, nonatomic, readonly, nullable) NSNumber *starRating;
 
 /**
  *  The video URL for a video native ad.
  *
  *  Note that if this native ad does not contain a video, this property will be nil.
  */
-@property (strong, nonatomic, readonly, alnullable) NSURL *videoURL;
-
-/**
- *  The impression tracking URL of the native ad.
- */
-@property (strong, nonatomic, readonly) NSURL *impressionTrackingURL __deprecated_msg("Invoke method -trackImpression or -trackImpressionAndNotify: rather than firing this URL yourself.");
+@property (strong, nonatomic, readonly, nullable) NSURL *videoURL;
 
 /**
  *  Fires the impression asynchronously.
@@ -80,19 +74,14 @@ AL_ASSUME_NONNULL_BEGIN
 /**
  *  Fires the impression asynchronously and notifies the provided delegate.
  */
-- (void)trackImpressionAndNotify:(alnullable id<ALPostbackDelegate>)postbackDelegate;
-
-/**
- *  The click URL the native ad redirects to.
- */
-@property (strong, nonatomic, readonly, alnullable) NSURL *clickURL __deprecated_msg("Invoke method -launchClickTarget rather than opening this URL yourself.");
+- (void)trackImpressionAndNotify:(nullable id<ALPostbackDelegate>)postbackDelegate;
 
 /**
  *  The video begin tracking URL of the native ad.
  *
  *  Note that if this native ad does not contain a video, this property will be nil.
  */
-@property (strong, nonatomic, readonly, alnullable) NSURL *videoStartTrackingURL;
+@property (strong, nonatomic, readonly, nullable) NSURL *videoStartTrackingURL;
 
 /**
  * Retrieve the URL which should be fired upon video completion.
@@ -100,15 +89,15 @@ AL_ASSUME_NONNULL_BEGIN
  * @param percentViewed The percentage of the video (0 - 100) that was viewed by the user.
  * @param firstPlay Whether or not this postback represents initial playback of the video. The first time you begin playback, you should pass true. If the video is paused for any reason and then later resumed mid-playback, you should fire this postback a second time, passing false to firstPlay.
  */
-- (alnullable NSURL *)videoEndTrackingURL:(NSUInteger)percentViewed firstPlay:(BOOL)firstPlay;
+- (nullable NSURL *)videoEndTrackingURL:(NSUInteger)percentViewed firstPlay:(BOOL)firstPlay;
 
 /**
- *  Represents the precaching states of the slot's images.
+ *  Represents the precaching states of the ad's images.
  */
 @property (assign, atomic, readonly, getter=isImagePrecached) BOOL imagePrecached;
 
 /**
- *  Represents the precaching state of the slot's video.
+ *  Represents the precaching state of the ad's video.
  *
  *  Note that if this native ad does not contain a video, this property will always be NO.
  */
@@ -124,4 +113,9 @@ AL_ASSUME_NONNULL_BEGIN
 
 @end
 
-AL_ASSUME_NONNULL_END
+@interface ALNativeAd(ALDeprecated)
+@property (strong, nonatomic, readonly, nullable) NSURL *clickURL __deprecated_msg("Invoke method -launchClickTarget rather than opening this URL yourself.");
+@property (strong, nonatomic, readonly) NSURL *impressionTrackingURL __deprecated_msg("Invoke method -trackImpression or -trackImpressionAndNotify: rather than firing this URL yourself.");
+@end
+
+NS_ASSUME_NONNULL_END

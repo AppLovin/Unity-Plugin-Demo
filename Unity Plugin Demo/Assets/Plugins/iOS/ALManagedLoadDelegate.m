@@ -7,9 +7,13 @@
 //
 
 #import "ALManagedLoadDelegate.h"
-
-#import "ALInterstitialAd.h"
 #import "ALInterstitialCache.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALInterstitialAd.h"
+#endif
 
 @interface ALManagedLoadDelegate ()
 @property (strong, nonatomic) id<ALAdLoadDelegate, ALUnityTypedLoadFailureDelegate> wrapper;
@@ -104,12 +108,32 @@ static NSObject *managedLoadDelegatesLock;
     if ( self.showInterstitialOnLoad )
     {
         // Show the ad
-        [[ALInterstitialAd shared] showOver: [UIApplication sharedApplication].keyWindow
-                                  andRender: ad];
+        [[ALInterstitialAd shared] showAd: ad];
     }
+    // If showing of a banner ad was requested upon load
     else if ( self.showBannerOnLoad )
     {
-        // If showing of a banner ad was requested upon load
+        if ( ![self.adView.adSize isEqual: ad.size] )
+        {
+            CGFloat w, h;
+            
+            if ( [[ALAdSize sizeMRec] isEqual: ad.size] )
+            {
+                w = 300.0f;
+                h = 250.0f;
+            }
+            else // BANNER or LEADER
+            {
+                h = [[ALAdSize sizeBanner] isEqual: ad.size] ? 50.0f : 90.0f;
+                w = [self getAvailableScreenWidth];
+            }
+            
+            CGRect newRect = self.adView.frame;
+            newRect.size.width = w;
+            newRect.size.height = h;
+            self.adView.frame = newRect;
+        }
+        
         [self.adView render: ad];
     }
     
@@ -128,6 +152,23 @@ static NSObject *managedLoadDelegatesLock;
 - (NSString *)description
 {
     return [NSString stringWithFormat: @"%@ - %@/%@/%@", @"ALManagedLoadDelegate", self.size, self.type, self.wrapper];
+}
+
+- (CGFloat)getAvailableScreenWidth
+{
+    CGRect screenBounds = [UIScreen mainScreen].bounds;
+    
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    CGFloat width = screenBounds.size.width;
+    
+    // Don't trust the system
+    if ((UIInterfaceOrientationIsLandscape(orientation) && screenBounds.size.height > screenBounds.size.width) || (UIInterfaceOrientationIsPortrait(orientation) && screenBounds.size.width > screenBounds.size.height))
+    {
+        width = screenBounds.size.height;
+    }
+    
+    return width;
 }
 
 @end
