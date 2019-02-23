@@ -47,6 +47,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) ALSdkSettings *settings;
 
 /**
+ * Get the SDK configuration object provided upon initialization.
+ */
+@property (nonatomic, strong, readonly) ALSdkConfiguration *configuration;
+
+/**
  * Set plugin version for mediation adapter or plugin.
  *
  * @param pluginVersion Some descriptive string which identifies the plugin.

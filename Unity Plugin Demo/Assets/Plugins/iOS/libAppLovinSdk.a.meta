@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 388efadf7abbc4be680c44ce496c1660
+guid: db03b105e402a404598793d5f7c815e7
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -88,9 +88,9 @@ PluginImporter:
     second:
       enabled: 1
       settings:
-        AddToEmbeddedBinaries: false
+        AddToEmbeddedBinaries: true
         CompileFlags: -ObjC -l"libz"
-        FrameworkDependencies: Accounts;CoreTelephony;StoreKit;SafariServices;WebKit;
+        FrameworkDependencies: AdSupport;CoreTelephony;StoreKit;SafariServices;WebKit;
   userData: 
   assetBundleName: 
   assetBundleVariant: 
