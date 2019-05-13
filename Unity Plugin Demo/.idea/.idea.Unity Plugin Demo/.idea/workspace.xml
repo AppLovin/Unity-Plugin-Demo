@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a5924ab5-0550-4ff7-bdc5-5993fc521490" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/iOSPostBuildProcess.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/iOSPostBuildProcess.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/applovin-sdk.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/applovin-sdk.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/applovin-unity-plugin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/applovin-unity-plugin.jar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AppLovin/AppLovin Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AppLovin/AppLovin Readme.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AppLovin/AppLovin.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AppLovin/AppLovin.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AppLovin/AppLovinEvents.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AppLovin/AppLovinEvents.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAd.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAd.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdDelegateWrapper.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdDelegateWrapper.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdDelegateWrapper.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdDelegateWrapper.m.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdDisplayDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdDisplayDelegate.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdLoadDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdLoadDelegate.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdRewardDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdRewardDelegate.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdService.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdSize.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdSize.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdType.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdType.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdUpdateDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdUpdateDelegate.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdVideoPlaybackDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdVideoPlaybackDelegate.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdView.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdView.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdViewEventDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAdViewEventDelegate.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAppLovinLogger.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAppLovinLogger.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAppLovinLogger.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALAppLovinLogger.m.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALErrorCodes.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALErrorCodes.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALEventService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALEventService.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALEventTypes.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALEventTypes.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALIncentivizedInterstitialAd.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALIncentivizedInterstitialAd.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALInterstitialAd.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALInterstitialAd.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALInterstitialCache.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALInterstitialCache.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALInterstitialCache.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALInterstitialCache.m.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALManagedLoadDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALManagedLoadDelegate.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALManagedLoadDelegate.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALManagedLoadDelegate.m.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALMediationProvider.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALMediationProvider.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALNativeAd.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALNativeAd.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALNativeAdLoadDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALNativeAdLoadDelegate.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALNativeAdPrecacheDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALNativeAdPrecacheDelegate.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALNativeAdService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALNativeAdService.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALPostbackDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALPostbackDelegate.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALPostbackService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALPostbackService.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALPrivacySettings.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALPrivacySettings.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALSdk.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALSdk.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALSdkConfiguration.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALSdkConfiguration.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALSdkSettings.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALSdkSettings.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALUserService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALUserService.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALVariableService.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ALVariableService.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/AppLovinSDK.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/AppLovinSDK.h.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/AppLovinUnity.mm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/AppLovinUnity.mm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/libAppLovinSdk.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/libAppLovinSdk.a.meta" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-767160412">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="43" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="43" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/Editor/AppLovinPostProcessBuildiOS.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <folding>
+                <marker date="1552965754865" expanded="true" signature="0:158" ph="/* AppLovinPostProcessBuildiOS.cs ... */" />
+                <marker date="1552965754865" expanded="true" signature="181:287" ph="..." />
+                <marker date="1552965754865" expanded="true" signature="336:1273" ph="{...}" />
+                <marker date="1552965754865" expanded="true" signature="446:1271" ph="{...}" />
+                <marker date="1552965754865" expanded="true" signature="496:1265" ph="{...}" />
+                <marker date="1552965754865" expanded="true" signature="808:866" ph="/* Add the -ObjC linker flag ... */" />
+                <marker date="1552965754865" expanded="true" signature="1019:1106" ph="/* Write modified Xcode project back to original location ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="135" column="17" lean-forward="true" selection-start-line="135" selection-start-column="17" selection-end-line="135" selection-end-column="17" />
+              <folding>
+                <marker date="1524615759000" expanded="true" signature="0:95" ph="/* AppLovin Unity Plugin C## Wrapper ... */" />
+                <marker date="1524615759000" expanded="false" signature="103:187" ph="..." />
+                <marker date="1524615759000" expanded="true" signature="210:25088" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="474:659" ph="/* Set the banner to the bottom of the screen while staying within the &quot;safe area&quot;. ... */" />
+                <marker date="1524615759000" expanded="true" signature="3997:4042" ph="/* Gets the default AppLovin plugin ... */" />
+                <marker date="1524615759000" expanded="true" signature="4086:4398" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="4119:4370" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="4402:4535" ph="/* Create an instance of AppLovin with a custom activity ... */" />
+                <marker date="1524615759000" expanded="true" signature="4757:4763" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="4766:4806" ph="/* Manually initialize the SDK ... */" />
+                <marker date="1524615759000" expanded="true" signature="4836:5021" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="5024:5078" ph="/* Loads and displays the AppLovin banner ad ... */" />
+                <marker date="1524615759000" expanded="true" signature="5121:5309" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="5313:5355" ph="/* Show an AppLovin Interstitial ... */" />
+                <marker date="1524615759000" expanded="true" signature="5411:5625" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="5628:5670" ph="/* Show an AppLovin Interstitial ... */" />
+                <marker date="1524615759000" expanded="true" signature="5732:5956" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="5959:5993" ph="/* Hides the AppLovin ad ... */" />
+                <marker date="1524615759000" expanded="true" signature="6016:6190" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="6194:6403" ph="/* Set the position of the banner ad ... */" />
+                <marker date="1524615759000" expanded="true" signature="6449:6645" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="6648:6757" ph="/* Set the width of the banner ad ... */" />
+                <marker date="1524615759000" expanded="true" signature="6793:6985" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="7045:7260" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="7299:7470" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="7496:7772" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="7822:8015" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="8050:8344" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="8384:8576" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="8633:8838" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="8841:9172" ph="/* Danger alert! ... */" />
+                <marker date="1524615759000" expanded="true" signature="9233:9577" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="9580:9911" ph="/* Danger alert! ... */" />
+                <marker date="1524615759000" expanded="true" signature="9949:10292" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="10348:10557" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="10614:10830" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="10890:11101" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="11164:11380" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="11449:11678" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="11681:12012" ph="/* Danger alert! ... */" />
+                <marker date="1524615759000" expanded="true" signature="12074:12387" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="12390:12721" ph="/* Danger alert! ... */" />
+                <marker date="1524615759000" expanded="true" signature="12766:13091" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="13094:13533" ph="/* Track an event of a given type. ... */" />
+                <marker date="1524615759000" expanded="true" signature="13617:14349" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="14386:14569" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="14626:14848" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="14880:15199" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="15265:15507" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="15544:15883" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="15886:15940" ph="/* Loads and displays the AppLovin banner ad ... */" />
+                <marker date="1524615759000" expanded="true" signature="15990:16035" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="16038:16330" ph="/* Loads and displays the AppLovin banner ad at given position ... */" />
+                <marker date="1524615759000" expanded="true" signature="16376:16437" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="16440:16482" ph="/* Show an AppLovin Interstitial ... */" />
+                <marker date="1524615759000" expanded="true" signature="16522:16575" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="16632:16690" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="16753:16817" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="16820:16967" ph="/* Preload/show an AppLovin rewarded interstitial. ... */" />
+                <marker date="1524615759000" expanded="true" signature="17036:17097" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="17146:17201" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="17266:17330" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="17408:17478" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="17481:17515" ph="/* Hides the AppLovin ad ... */" />
+                <marker date="1524615759000" expanded="true" signature="17545:17584" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="17587:17853" ph="/* Set the position of the banner ad ... */" />
+                <marker date="1524615759000" expanded="true" signature="17906:17956" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="17959:18068" ph="/* Set the width of the banner ad ... */" />
+                <marker date="1524615759000" expanded="true" signature="18111:18159" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="18162:18202" ph="/* Set the SDK key to be used. ... */" />
+                <marker date="1524615759000" expanded="true" signature="18248:18296" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="18299:18377" ph="/* Set verbose logging on or off. Pass the string &quot;true&quot; or &quot;false&quot;. ... */" />
+                <marker date="1524615759000" expanded="true" signature="18441:18507" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="18510:18758" ph="/* Determines whether to begin video ads in a muted state or not. Defaults to true unless changed in the dashboar ... */" />
+                <marker date="1524615759000" expanded="true" signature="18802:18848" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="18851:18974" ph="/* Whether or not video ads will begin in a muted state or not. Defaults to true unless changed in the dashboard. ... */" />
+                <marker date="1524615759000" expanded="true" signature="19005:19052" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="19055:19324" ph="/* Toggle test ads for the SDK. This is set to false by default. ... */" />
+                <marker date="1524615759000" expanded="true" signature="19379:19436" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="19439:19488" ph="/* Whether or not test mode is enabled. ... */" />
+                <marker date="1524615759000" expanded="true" signature="19528:19584" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="19648:19706" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="19709:20040" ph="/* Danger alert! ... */" />
+                <marker date="1524615759000" expanded="true" signature="20108:20178" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="20181:20512" ph="/* Danger alert! ... */" />
+                <marker date="1524615759000" expanded="true" signature="20557:20618" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="20621:20952" ph="/* Danger alert! ... */" />
+                <marker date="1524615759000" expanded="true" signature="21021:21092" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="21095:21173" ph="/* Check if a currently preloaded interstitial is a video ad or not. ... */" />
+                <marker date="1524615759000" expanded="true" signature="21225:21293" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="21363:21409" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="21412:23051" ph="/* New in plugin 3.0.0 is the ability to set an Ad Listener. ... */" />
+                <marker date="1524615759000" expanded="true" signature="23119:23183" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="23247:23312" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="23315:23754" ph="/* Track an event of a given type. ... */" />
+                <marker date="1524615759000" expanded="true" signature="23845:23909" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="23912:24007" ph="/* Hide the status bar and soft keys on relevant Android devices, e.g. Nexus devices. ... */" />
+                <marker date="1524615759000" expanded="true" signature="24050:24102" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="24105:24334" ph="/* Set whether or not user has provided consent for information sharing with AppLovin. ... */" />
+                <marker date="1524615759000" expanded="true" signature="24396:24458" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="24461:24549" ph="/* Check if user has provided consent for information sharing with AppLovin. ... */" />
+                <marker date="1524615759000" expanded="true" signature="24587:24639" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="24642:24792" ph="/* Mark user as age restricted (i.e. under 16). ... */" />
+                <marker date="1524615759000" expanded="true" signature="24864:24936" ph="{...}" />
+                <marker date="1524615759000" expanded="true" signature="24939:24986" ph="/* Check if user is age restricted. ... */" />
+                <marker date="1524615759000" expanded="true" signature="25029:25086" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>No parent activity specified</find>
+      <find>AppLovin</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/Editor/AppLovinPostProcessBuildiOS.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/Editor/AppLovinPostProcessBuildiOS.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-4973" />
+    <option name="y" value="17" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5924ab5-0550-4ff7-bdc5-5993fc521490" name="Default Changelist" comment="" />
+      <created>1552965598710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552965598710</updated>
+      <workItem from="1552965601614" duration="163000" />
+      <workItem from="1554782315414" duration="1194000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1357000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-4973" y="17" width="1680" height="1027" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" order="10" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/Editor/AppLovinPostProcessBuildiOS.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <marker date="1552965754865" expanded="true" signature="0:158" ph="/* AppLovinPostProcessBuildiOS.cs ... */" />
+            <marker date="1552965754865" expanded="true" signature="181:287" ph="..." />
+            <marker date="1552965754865" expanded="true" signature="336:1273" ph="{...}" />
+            <marker date="1552965754865" expanded="true" signature="446:1271" ph="{...}" />
+            <marker date="1552965754865" expanded="true" signature="496:1265" ph="{...}" />
+            <marker date="1552965754865" expanded="true" signature="808:866" ph="/* Add the -ObjC linker flag ... */" />
+            <marker date="1552965754865" expanded="true" signature="1019:1106" ph="/* Write modified Xcode project back to original location ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="135" column="17" lean-forward="true" selection-start-line="135" selection-start-column="17" selection-end-line="135" selection-end-column="17" />
+          <folding>
+            <marker date="1524615759000" expanded="true" signature="0:95" ph="/* AppLovin Unity Plugin C## Wrapper ... */" />
+            <marker date="1524615759000" expanded="false" signature="103:187" ph="..." />
+            <marker date="1524615759000" expanded="true" signature="210:25088" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="474:659" ph="/* Set the banner to the bottom of the screen while staying within the &quot;safe area&quot;. ... */" />
+            <marker date="1524615759000" expanded="true" signature="3997:4042" ph="/* Gets the default AppLovin plugin ... */" />
+            <marker date="1524615759000" expanded="true" signature="4086:4398" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="4119:4370" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="4402:4535" ph="/* Create an instance of AppLovin with a custom activity ... */" />
+            <marker date="1524615759000" expanded="true" signature="4757:4763" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="4766:4806" ph="/* Manually initialize the SDK ... */" />
+            <marker date="1524615759000" expanded="true" signature="4836:5021" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="5024:5078" ph="/* Loads and displays the AppLovin banner ad ... */" />
+            <marker date="1524615759000" expanded="true" signature="5121:5309" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="5313:5355" ph="/* Show an AppLovin Interstitial ... */" />
+            <marker date="1524615759000" expanded="true" signature="5411:5625" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="5628:5670" ph="/* Show an AppLovin Interstitial ... */" />
+            <marker date="1524615759000" expanded="true" signature="5732:5956" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="5959:5993" ph="/* Hides the AppLovin ad ... */" />
+            <marker date="1524615759000" expanded="true" signature="6016:6190" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="6194:6403" ph="/* Set the position of the banner ad ... */" />
+            <marker date="1524615759000" expanded="true" signature="6449:6645" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="6648:6757" ph="/* Set the width of the banner ad ... */" />
+            <marker date="1524615759000" expanded="true" signature="6793:6985" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="7045:7260" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="7299:7470" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="7496:7772" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="7822:8015" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="8050:8344" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="8384:8576" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="8633:8838" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="8841:9172" ph="/* Danger alert! ... */" />
+            <marker date="1524615759000" expanded="true" signature="9233:9577" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="9580:9911" ph="/* Danger alert! ... */" />
+            <marker date="1524615759000" expanded="true" signature="9949:10292" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="10348:10557" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="10614:10830" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="10890:11101" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="11164:11380" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="11449:11678" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="11681:12012" ph="/* Danger alert! ... */" />
+            <marker date="1524615759000" expanded="true" signature="12074:12387" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="12390:12721" ph="/* Danger alert! ... */" />
+            <marker date="1524615759000" expanded="true" signature="12766:13091" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="13094:13533" ph="/* Track an event of a given type. ... */" />
+            <marker date="1524615759000" expanded="true" signature="13617:14349" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="14386:14569" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="14626:14848" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="14880:15199" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="15265:15507" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="15544:15883" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="15886:15940" ph="/* Loads and displays the AppLovin banner ad ... */" />
+            <marker date="1524615759000" expanded="true" signature="15990:16035" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="16038:16330" ph="/* Loads and displays the AppLovin banner ad at given position ... */" />
+            <marker date="1524615759000" expanded="true" signature="16376:16437" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="16440:16482" ph="/* Show an AppLovin Interstitial ... */" />
+            <marker date="1524615759000" expanded="true" signature="16522:16575" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="16632:16690" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="16753:16817" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="16820:16967" ph="/* Preload/show an AppLovin rewarded interstitial. ... */" />
+            <marker date="1524615759000" expanded="true" signature="17036:17097" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="17146:17201" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="17266:17330" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="17408:17478" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="17481:17515" ph="/* Hides the AppLovin ad ... */" />
+            <marker date="1524615759000" expanded="true" signature="17545:17584" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="17587:17853" ph="/* Set the position of the banner ad ... */" />
+            <marker date="1524615759000" expanded="true" signature="17906:17956" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="17959:18068" ph="/* Set the width of the banner ad ... */" />
+            <marker date="1524615759000" expanded="true" signature="18111:18159" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="18162:18202" ph="/* Set the SDK key to be used. ... */" />
+            <marker date="1524615759000" expanded="true" signature="18248:18296" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="18299:18377" ph="/* Set verbose logging on or off. Pass the string &quot;true&quot; or &quot;false&quot;. ... */" />
+            <marker date="1524615759000" expanded="true" signature="18441:18507" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="18510:18758" ph="/* Determines whether to begin video ads in a muted state or not. Defaults to true unless changed in the dashboar ... */" />
+            <marker date="1524615759000" expanded="true" signature="18802:18848" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="18851:18974" ph="/* Whether or not video ads will begin in a muted state or not. Defaults to true unless changed in the dashboard. ... */" />
+            <marker date="1524615759000" expanded="true" signature="19005:19052" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="19055:19324" ph="/* Toggle test ads for the SDK. This is set to false by default. ... */" />
+            <marker date="1524615759000" expanded="true" signature="19379:19436" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="19439:19488" ph="/* Whether or not test mode is enabled. ... */" />
+            <marker date="1524615759000" expanded="true" signature="19528:19584" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="19648:19706" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="19709:20040" ph="/* Danger alert! ... */" />
+            <marker date="1524615759000" expanded="true" signature="20108:20178" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="20181:20512" ph="/* Danger alert! ... */" />
+            <marker date="1524615759000" expanded="true" signature="20557:20618" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="20621:20952" ph="/* Danger alert! ... */" />
+            <marker date="1524615759000" expanded="true" signature="21021:21092" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="21095:21173" ph="/* Check if a currently preloaded interstitial is a video ad or not. ... */" />
+            <marker date="1524615759000" expanded="true" signature="21225:21293" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="21363:21409" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="21412:23051" ph="/* New in plugin 3.0.0 is the ability to set an Ad Listener. ... */" />
+            <marker date="1524615759000" expanded="true" signature="23119:23183" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="23247:23312" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="23315:23754" ph="/* Track an event of a given type. ... */" />
+            <marker date="1524615759000" expanded="true" signature="23845:23909" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="23912:24007" ph="/* Hide the status bar and soft keys on relevant Android devices, e.g. Nexus devices. ... */" />
+            <marker date="1524615759000" expanded="true" signature="24050:24102" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="24105:24334" ph="/* Set whether or not user has provided consent for information sharing with AppLovin. ... */" />
+            <marker date="1524615759000" expanded="true" signature="24396:24458" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="24461:24549" ph="/* Check if user has provided consent for information sharing with AppLovin. ... */" />
+            <marker date="1524615759000" expanded="true" signature="24587:24639" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="24642:24792" ph="/* Mark user as age restricted (i.e. under 16). ... */" />
+            <marker date="1524615759000" expanded="true" signature="24864:24936" ph="{...}" />
+            <marker date="1524615759000" expanded="true" signature="24939:24986" ph="/* Check if user is age restricted. ... */" />
+            <marker date="1524615759000" expanded="true" signature="25029:25086" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
