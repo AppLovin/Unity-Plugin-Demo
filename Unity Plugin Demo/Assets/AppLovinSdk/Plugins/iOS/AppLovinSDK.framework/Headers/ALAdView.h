@@ -15,15 +15,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * This protocol describes a UIView which is capable of loading and showing ads. ALAdView is its sole public concrete implementation.
- *
- * The functionality of this protocol is exposed via the concrete ALAdView class.
- * To invoke any of its methods, use that; e.g.
- *
- * ALAdView* adView = [[ALAdView alloc] initWithSize: [ALAdSize sizeBanner]];
- * [adView loadNextAd];
+ * This class represents a view-based ad - i.e. banner, mrec or leader.
  */
-@protocol ALAdViewProtocol
+@interface ALAdView : UIView
 
 /**
  * @name Ad Delegates
@@ -34,24 +28,24 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  Please note: This delegate is retained strongly and might lead to retain cycles if delegate holds strong reference to this ALAdView.
  */
-@property (strong, atomic, nullable) id<ALAdLoadDelegate> adLoadDelegate;
+@property (nonatomic, strong, nullable) IBOutlet id<ALAdLoadDelegate> adLoadDelegate;
 
 /**
  *  An object conforming to the ALAdDisplayDelegate protocol, which, if set, will be notified of ad show/hide events.
  *
  *  Please note: This delegate is retained strongly and might lead to retain cycles if delegate holds strong reference to this ALAdView.
  */
-@property (strong, atomic, nullable) id<ALAdDisplayDelegate> adDisplayDelegate;
+@property (nonatomic, strong, nullable) IBOutlet id<ALAdDisplayDelegate> adDisplayDelegate;
 
 /**
  *  An object conforming to the ALAdViewEventDelegate protocol, which, if set, will be notified of ALAdView-specific events.
  *
  *  Please note: This delegate is retained strongly and might lead to retain cycles if delegate holds strong reference to this ALAdView.
  */
-@property (strong, atomic, nullable) id<ALAdViewEventDelegate> adEventDelegate;
+@property (nonatomic, strong, nullable) IBOutlet id<ALAdViewEventDelegate> adEventDelegate;
 
 // Primarily for internal use; banners and mrecs cannot contain videos.
-@property (strong, atomic, nullable) id<ALAdVideoPlaybackDelegate> adVideoPlaybackDelegate;
+@property (nonatomic, strong, nullable) IBOutlet id<ALAdVideoPlaybackDelegate> adVideoPlaybackDelegate;
 
 /**
  * @name Ad View Configuration
@@ -60,20 +54,20 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  The size of ads to be loaded within this ALAdView.
  */
-@property (strong, atomic) ALAdSize *adSize;
+@property (nonatomic, strong) ALAdSize *adSize;
 
 /**
  *  The zone identifier this ALAdView was initialized with and is loading ads for, if any.
  */
-@property (copy, nonatomic, readonly, nullable) NSString *zoneIdentifier;
+@property (nonatomic, copy, readonly, nullable) NSString *zoneIdentifier;
 
 /**
  *  Whether or not this ALAdView should automatically load and rotate banners.
  *
  *  If YES, ads will be automatically loaded and updated. If NO, you are reponsible for this behavior via [ALAdView loadNextAd]. Defaults to YES.
  */
-@property (assign, atomic, getter=isAutoloadEnabled, setter=setAutoloadEnabled:) BOOL autoload;
-@property (assign, atomic, getter=isAutoloadEnabled, setter=setAutoloadEnabled:) BOOL shouldAutoload;
+@property (nonatomic, assign, getter=isAutoloadEnabled, setter=setAutoloadEnabled:) BOOL autoload;
+@property (nonatomic, assign, getter=isAutoloadEnabled, setter=setAutoloadEnabled:) BOOL shouldAutoload;
 
 /**
  * @name Loading and Rendering Ads
@@ -147,18 +141,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @return A new instance of ALAdView.
  */
 - (instancetype)initWithFrame:(CGRect)frame size:(ALAdSize *)size sdk:(ALSdk *)sdk;
-
-
 - (instancetype)init __attribute__((unavailable("Use one of the other provided initializers")));
-
-@end
-
-/**
- * This class represents the only public implementation of ALAdViewProtocol.
- *
- * It should be used for all ad related tasks.
- */
-@interface ALAdView : UIView <ALAdViewProtocol>
 
 @end
 
