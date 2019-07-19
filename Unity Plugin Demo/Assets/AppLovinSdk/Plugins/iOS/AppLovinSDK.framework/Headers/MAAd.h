@@ -25,11 +25,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy, readonly) NSString *adUnitIdentifier;
 
-/**
- * Check if this ad is ready to be shown.
- */
-@property (nonatomic, assign, readonly, getter=isReady) BOOL ready;
-
 @end
 
 NS_ASSUME_NONNULL_END
