@@ -1,5 +1,5 @@
 //
-//  AppLovinAd.h
+//  ALAd.h
 //  AppLovinSDK
 //
 //  Copyright © 2019 AppLovin Corporation. All rights reserved.
@@ -11,51 +11,44 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  This class represents an ad that has been served from the AppLovin server and
- *  should be displayed to the user.
+ * This class represents an ad that has been served from the AppLovin server.
  */
-@interface ALAd : NSObject <NSCopying>
+@interface ALAd : NSObject<NSCopying>
 
 /**
- * @name Ad Properties
+ * The size of this ad.
  */
+@property (nonatomic, strong, readonly) ALAdSize *size;
 
 /**
- *  The size of this ad.
+ * The type of this ad.
  */
-@property (strong, nonatomic, readonly) ALAdSize *size;
+@property (nonatomic, strong, readonly) ALAdType *type;
 
 /**
- *  The type of this ad.
+ * The zone id for the ad, if any.
  */
-@property (strong, nonatomic, readonly) ALAdType *type;
+@property (nonatomic, copy, readonly, nullable) NSString *zoneIdentifier;
 
 /**
- *  The zone identifier for the ad, if any.
+ * Whether or not the current ad is a video advertisement.
  */
-@property (copy, nonatomic, readonly, nullable) NSString *zoneIdentifier;
+@property (nonatomic, assign, readonly, getter=isVideoAd) BOOL videoAd;
 
 /**
- *  Whether or not the current ad is a video advertisement.
- */
-@property (assign, readonly, getter=isVideoAd) BOOL videoAd;
-
-/**
- * Get an arbitrary ad value for a given key. The list of keys may be found
- * in AppLovin documentation online.
+ * Get an arbitrary ad value for a given key. The list of keys may be found in AppLovin documentation online.
  */
 - (nullable NSString *)adValueForKey:(NSString *)key;
 
 /**
- * @name Ad Identification
- */
-
-/**
- *  A unique ID which identifies this advertisement.
+ * A unique ID which identifies this advertisement.
  *
- *  Should you need to report a broken ad to AppLovin support, please include this number's longValue.
+ * Should you need to report a broken ad to AppLovin support, please include this number's longValue.
  */
-@property (strong, nonatomic, readonly) NSNumber *adIdNumber;
+@property (nonatomic, strong, readonly) NSNumber *adIdNumber;
+
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

@@ -153,7 +153,7 @@ typedef void (^ALSdkInitializationCompletionHandler)(ALSdkConfiguration *configu
  *
  * Please make sure your SDK key is set in the application's Info.plist under the property 'AppLovinSdkKey'.
  *
- * @param completionHandler The callback that will be run when the SDK finishes initializing.
+ * @param completionHandler The callback that will be run on the main queue when the SDK finishes initializing.
  */
 + (void)initializeSdkWithCompletionHandler:(nullable ALSdkInitializationCompletionHandler)completionHandler;
 

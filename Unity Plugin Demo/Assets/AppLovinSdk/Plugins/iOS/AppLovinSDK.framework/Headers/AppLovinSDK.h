@@ -45,3 +45,10 @@
 #import <AppLovinSDK/MAErrorCodes.h>
 #import <AppLovinSDK/MAReward.h>
 #import <AppLovinSDK/MARewardedAdDelegate.h>
+
+#import <AppLovinSDK/ALCCommunicator.h>
+#import <AppLovinSDK/ALCEntity.h>
+#import <AppLovinSDK/ALCMessage.h>
+#import <AppLovinSDK/ALCSubscriber.h>
+#import <AppLovinSDK/ALCPublisher.h>
+#import <AppLovinSDK/ALCMessagingService.h>

@@ -94,7 +94,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Initialize the ad view with a given size.
  *
- *  @param size ALAdSize representing the size of this ad. For example, [ALAdSize sizeBanner].
+ *  @param size ALAdSize representing the size of this ad. For example, ALAdSize.banner.
  *
  *  @return A new instance of ALAdView.
  */
@@ -103,7 +103,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Initialize the ad view for a given size and zone.
  *
- *  @param size           ALAdSize representing the size of this ad. For example, [ALAdSize sizeBanner].
+ *  @param size           ALAdSize representing the size of this ad. For example, ALAdSize.banner.
  *  @param zoneIdentifier Identifier for the zone this ALAdView should load ads for.
  *
  *  @return A new instance of ALAdView.
@@ -114,7 +114,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Initialize the ad view with a given sdk and size.
  *
  *  @param sdk  Instance of ALSdk to use.
- *  @param size ALAdSize representing the size of this ad. For example, [ALAdSize sizeBanner].
+ *  @param size ALAdSize representing the size of this ad. For example, ALAdSize.banner.
  *
  *  @return A new instance of ALAdView.
  */
@@ -124,7 +124,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Initialize the ad view with a given sdk, size, and zone.
  *
  *  @param sdk            Instance of ALSdk to use.
- *  @param size           ALAdSize representing the size of this ad. For example, [ALAdSize sizeBanner].
+ *  @param size           ALAdSize representing the size of this ad. For example, ALAdSize.banner.
  *  @param zoneIdentifier Identifier for the zone this ALAdView should load ads for.
  *
  *  @return A new instance of ALAdView.

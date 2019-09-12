@@ -40,12 +40,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)loadNextAdForZoneIdentifier:(NSString *)zoneIdentifier andNotify:(id<ALAdLoadDelegate>)delegate;
 
-- (instancetype)init __attribute__((unavailable("Access ALAdService through ALSdk's adService property.")));
-
-@end
-
-@interface ALAdService(ALMultizoneSupport)
-
 /**
  * Generates a token used for advanced header bidding.
  */
@@ -72,6 +66,9 @@ NS_ASSUME_NONNULL_BEGIN
  * @param delegate         A callback to notify that the ad has been loaded. Must not be nil.
  */
 - (void)loadNextAdForZoneIdentifiers:(NSArray<NSString *> *)zoneIdentifiers andNotify:(id<ALAdLoadDelegate>)delegate;
+
+
+- (instancetype)init __attribute__((unavailable("Access ALAdService through ALSdk's adService property.")));
 
 @end
 

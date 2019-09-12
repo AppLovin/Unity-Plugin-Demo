@@ -6,73 +6,38 @@
 //  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * This class defines a size of an ad to be displayed. It is recommended to use default sizes that are
- * declared in this class (<code>BANNER</code>, <code>INTERSTITIAL</code>)
+ * This class defines the possible sizes of an ad.
  */
-@interface ALAdSize : NSObject <NSCopying>
+@interface ALAdSize : NSObject
 
 /**
- * @name Ad Size Identification
+ * Represents the size of a 320x50 banner advertisement.
  */
+@property (class, nonatomic, strong, readonly) ALAdSize *banner;
 
 /**
- *  An <code>NSString</code> label which describes this ad size.
+ * Represents the size of a 300x250 rectangular advertisement.
  */
-@property (copy, nonatomic, readonly) NSString *label;
+@property (class, nonatomic, strong, readonly) ALAdSize *mrec;
 
 /**
- * @name Supported Ad Size Singletons
+ * Represents the size of a 728x90 leaderboard advertisement (for tablets).
  */
+@property (class, nonatomic, strong, readonly) ALAdSize *leader;
 
 /**
- *  Retrieve a singleton instance of the <code>BANNER</code> ad size object.
- *
- *  Banners are typically 320x50 ads added to the bottom of the view.
- *
- *  @return An instance of ALAdSize which represents the size <code>BANNER</code>.
+ * Represents the size of a full-screen advertisement.
  */
-+ (ALAdSize *)sizeBanner;
+@property (class, nonatomic, strong, readonly) ALAdSize *interstitial;
 
-/**
- *  Retrieve a singleton instance of the <code>INTERSTITIAL</code> ad size object.
- *
- *  Interstitials are full-screen ads with high click-through rates which will fully cover the <code>UIViewController</code> below.
- *
- *  @return An instance of ALAdSize which represents the size <code>INTERSTITIAL</code>.
- */
-+ (ALAdSize *)sizeInterstitial;
 
-/**
- *  Retrieve a singleton instance of the <code>NATIVE</code> ad size object.
- *
- *  @return An instance of ALAdSize which represents the size <code>NATIVE</code>.
- */
-+ (ALAdSize *)sizeNative;
-
-/**
- *  Retrieve a singleton instance of the <code>MREC</code> ad size object.
- *
- *  MRECs are 300x250 (mostly square) advertisements.
- *
- *  @return An instance of ALAdSize which represents the size <code>MREC</code>.
- */
-+ (ALAdSize *)sizeMRec;
-
-/**
- *  Retrieve a singleton instance of the <code>LEADER</code> ad size object.
- *
- *  Leaderboard ads are 728x90 ads intended for iPads.
- *
- *  @return An instance of ALAdSize which represents the size <code>LEADER</code>.
- */
-+ (ALAdSize *)sizeLeader;
-
-- (id)init __attribute__((unavailable("Do not alloc-init your own instances; use an existing singleton size like [ALAdSize sizeBanner]")));
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 
@@ -80,7 +45,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic, readonly) CGFloat width __deprecated;
 @property (assign, nonatomic, readonly) CGFloat height __deprecated;
 + (NSArray *)allSizes __deprecated_msg("Retrieval of all sizes is deprecated and will be removed in a future SDK version.");
-+ (ALAdSize *)sizeWithLabel:(NSString *)label orDefault:(ALAdSize *)defaultSize __deprecated_msg("Custom ad sizes are no longer supported; use an existing singleton size like [ALAdSize sizeBanner]");
++ (ALAdSize *)sizeWithLabel:(NSString *)label orDefault:(ALAdSize *)defaultSize __deprecated_msg("Custom ad sizes are no longer supported; use an existing singleton size like ALAdSize.banner");
+@property (nonatomic, strong, readonly, class) ALAdSize *sizeNative __deprecated;
+@property (nonatomic, copy, readonly) NSString *label __deprecated_msg("Retrieval of underlying string is deprecated and will be removed in a future SDK version.");
++ (ALAdSize *)sizeBanner __deprecated_msg("Class method `sizeBanner` is deprecated and will be removed in a future SDK version. Please use ALAdSize.banner instead.");
++ (ALAdSize *)sizeMRec __deprecated_msg("Class method `sizeMRec` is deprecated and will be removed in a future SDK version. Please use ALAdSize.mrec instead.");
++ (ALAdSize *)sizeLeader __deprecated_msg("Class method `sizeLeader` is deprecated and will be removed in a future SDK version. Please use ALAdSize.leader instead.");
++ (ALAdSize *)sizeInterstitial __deprecated_msg("Class method `sizeInterstitial` is deprecated and will be removed in a future SDK version. Please use ALAdSize.interstitial instead.");
 @end
 
 NS_ASSUME_NONNULL_END

@@ -2,61 +2,34 @@
 //  ALAdType.h
 //  AppLovinSDK
 //
-//
 //  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  This class represents the behavior of an ad.
+ * This class defines the possible types of an interstitial ad (i.e. regular or incentivized/rewarded).
  */
-
-@interface ALAdType : NSObject <NSCopying>
+@interface ALAdType : NSObject
 
 /**
- *  @name Ad Type Identification
+ * Represents a regular fullscreen ad.
  */
+@property (class, nonatomic, strong, readonly) ALAdType *regular;
 
 /**
- *  String representing the name of this ad type.
+ * Represents a rewarded video where users will be rewarded for viewing this type of ad.
  */
-@property (copy, nonatomic, readonly) NSString *label;
+@property (class, nonatomic, strong, readonly) ALAdType *incentivized;
 
-/**
- *  @name Supported Ad Type Singletons
- */
+@end
 
-/**
- *  Represents a standard advertisement.
- *
- *  @return ALAdType representing a standard advertisement.
- */
-+ (ALAdType *)typeRegular;
-
-/**
- *  Represents a rewarded video.
- *
- *  Typically, you'll award your users coins for viewing this type of ad.
- *
- *  @return ALAdType representing a rewarded video.
- */
-+ (ALAdType *)typeIncentivized;
-
-/**
- *  Represents a native ad.
- *
- *  @return ALAdType representing a native ad.
- */
-+ (ALAdType *)typeNative;
-
-/**
- *  Retrieve an <code>NSArray</code> of all available ad size singleton instances.
- *
- *  @return <code>[NSArray arrayWithObjects: [ALAdType typeRegular], [ALAdType typeIncentivized], nil];</code>
- */
-+ (NSArray *)allTypes;
-
+@interface ALAdType(ALDeprecated)
++ (ALAdType *)typeNative __deprecated;
++ (NSArray *)allTypes __deprecated_msg("Retrieval of all types is deprecated and will be removed in a future SDK version.");
+@property (copy, nonatomic, readonly) NSString *label __deprecated_msg("Retrieval of underlying string is deprecated and will be removed in a future SDK version.");
++ (ALAdType *)typeRegular __deprecated_msg("Class method `typeRegular` is deprecated and will be removed in a future SDK version. Please use ALAdType.regular instead.");
++ (ALAdType *)typeIncentivized __deprecated_msg("Class method `typeIncentivized` is deprecated and will be removed in a future SDK version. Please use ALAdType.incentivized instead.");
 @end
 
 NS_ASSUME_NONNULL_END
