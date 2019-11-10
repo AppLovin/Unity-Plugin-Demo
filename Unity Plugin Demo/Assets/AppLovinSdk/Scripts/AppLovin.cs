@@ -1,7 +1,7 @@
 /**
  * AppLovin Unity Plugin C# Wrapper
  *
- * @author David Anderson, Matt Szaro, Thomas So
+ * @author Thomas So
  */
 
 using UnityEngine;
@@ -64,12 +64,6 @@ public class AppLovin
 
 		[DllImport ("__Internal")]
 		private static extern bool _AppLovinIsMuted ();
-
-		[DllImport ("__Internal")]
-		private static extern void _AppLovinSetTestAdsEnabled (string enabled);
-
-		[DllImport ("__Internal")]
-		private static extern bool _AppLovinIsTestAdsEnabled ();
 
 		[DllImport ("__Internal")]
 		private static extern bool _AppLovinHasPreloadedInterstitial (string zoneId);
@@ -311,35 +305,6 @@ public class AppLovin
 			return System.Boolean.Parse(isMutedStr);
 		#elif UNITY_IPHONE
 			return _AppLovinIsMuted();
-		#else
-		return false;
-		#endif
-		#else
-		return false;
-		#endif
-	}
-
-	private void setTestAdsEnabled (string enabled)
-	{
-		#if !UNITY_EDITOR
-		#if UNITY_ANDROID
-			applovinFacade.CallStatic("SetTestAdsEnabled", enabled);
-		#endif
-
-		#if UNITY_IPHONE
-			_AppLovinSetTestAdsEnabled(enabled);
-		#endif
-		#endif
-	}
-
-	private bool isTestAdsEnabled ()
-	{
-		#if !UNITY_EDITOR
-		#if UNITY_ANDROID
-			string enabledStr = applovinFacade.CallStatic<string>("IsTestAdsEnabled");
-			return System.Boolean.Parse(enabledStr);
-		#elif UNITY_IPHONE
-			return _AppLovinIsTestAdsEnabled();
 		#else
 		return false;
 		#endif
@@ -742,25 +707,6 @@ public class AppLovin
 	public static bool IsMuted ()
 	{
 		return getDefaultPlugin ().isMuted ();
-	}
-
-	/**
- 	* Toggle test ads for the SDK. This is set to false by default.
- 	*
- 	* If enabled, AppLovin will display test ads from our servers, guaranteeing 100% fill.
- 	* This is for integration testing only. Ensure that you set this to false when the app is launched.
- 	*/
-	public static void SetTestAdsEnabled (string enabled)
-	{
-		getDefaultPlugin ().setTestAdsEnabled (enabled);
-	}
-
-	/**
-	 * Whether or not test mode is enabled.
-	 */
-	public static bool IsTestAdsEnabled ()
-	{
-		return getDefaultPlugin ().isTestAdsEnabled ();
 	}
 
 	public static void PreloadInterstitial (string zoneId = null)

@@ -175,19 +175,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)showAd:(ALAd *)ad andNotify:(nullable id<ALAdRewardDelegate>)adRewardDelegate;
 
-/**
- * Dismiss an incentivized interstitial prematurely, before video playback has completed.
- *
- * In most circumstances, this is not recommended, as it may confuse users by denying them a reward.
- */
-- (void)dismiss;
-
 
 - (instancetype)init __attribute__((unavailable("Use initWithSdk:, initWithZoneIdentifier:, or [ALIncentivizedInterstitialAd shared] instead.")));
 
 @end
 
 @interface ALIncentivizedInterstitialAd(ALDeprecated)
+- (void)dismiss __deprecated_msg("Explicitly dismissing an ad has been deprecated and will be removed in a future SDK version.");
 + (void)showOverPlacement:(nullable NSString *)placement
 __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
 + (void)showOverPlacement:(nullable NSString *)placement andNotify:(nullable id<ALAdRewardDelegate>)adRewardDelegate
