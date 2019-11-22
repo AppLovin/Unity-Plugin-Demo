@@ -308,17 +308,6 @@ extern "C" {
         return [[ALSdk shared] settings].muted;
     }
     
-    void _AppLovinSetTestAdsEnabled(const char * enabled)
-    {
-        NSString *enabledStr = [NSString stringWithUTF8String: enabled];
-        [[ALSdk shared] settings].isTestAdsEnabled = [enabledStr boolValue];
-    }
-    
-    bool _AppLovinIsTestAdsEnabled()
-    {
-        return [[ALSdk shared] settings].isTestAdsEnabled;
-    }
-    
     //
     // Interstitial ad loading / showing
     //
