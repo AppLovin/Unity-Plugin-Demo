@@ -43,7 +43,6 @@ public class MainMenu : MonoBehaviour
 			// Set SDK key and initialize SDK
 			AppLovin.SetSdkKey (SDK_KEY);
 			AppLovin.InitializeSdk ();
-			AppLovin.SetTestAdsEnabled ("true");
 			AppLovin.SetUnityAdListener ("MainMenu");
 			AppLovin.SetRewardedVideoUsername ("demo_user");
 		}
