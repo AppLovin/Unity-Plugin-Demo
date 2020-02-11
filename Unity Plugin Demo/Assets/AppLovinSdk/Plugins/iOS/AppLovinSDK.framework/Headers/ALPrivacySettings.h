@@ -37,6 +37,18 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (BOOL)isAgeRestrictedUser;
 
+/**
+ * Set whether or not user has opted out of the sale of their personal information.
+ *
+ * @param doNotSell 'YES' if the user has opted out of the sale of their personal information.
+ */
++ (void)setDoNotSell:(BOOL)doNotSell;
+
+/**
+ * Check if the user has opted out of the sale of their personal information.
+ */
++ (BOOL)isDoNotSell;
+
 
 - (instancetype)init NS_UNAVAILABLE;
 
