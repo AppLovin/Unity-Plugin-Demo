@@ -25,6 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy, readonly) NSString *adUnitIdentifier;
 
+/**
+ * The ad network for which this ad was loaded from.
+ */
+@property (nonatomic, copy, readonly) NSString *networkName;
+
 @end
 
 NS_ASSUME_NONNULL_END
