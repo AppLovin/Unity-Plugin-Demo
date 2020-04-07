@@ -109,6 +109,9 @@ public class AppLovin
 
 		[DllImport ("__Internal")]
 		private static extern bool _AppLovinIsAgeRestrictedUser ();
+
+		[DllImport ("__Internal")]
+		private static extern bool _AppLovinIsTablet ();
 	#endif
 
 	#if UNITY_ANDROID
@@ -582,6 +585,20 @@ public class AppLovin
 	#else
 		return false;
 	#endif
+	}
+
+    /// <summary>
+    /// Returns whether or not the device is a tablet.
+    /// </summary>
+	public static bool IsTablet()
+	{
+		#if UNITY_IOS
+			return _AppLovinIsTablet();
+		#elif UNITY_ANDROID
+			return applovinFacade.CallStatic<bool>("IsTablet", currentActivity);
+		#else
+			return false;
+		#endif
 	}
 
 	/**

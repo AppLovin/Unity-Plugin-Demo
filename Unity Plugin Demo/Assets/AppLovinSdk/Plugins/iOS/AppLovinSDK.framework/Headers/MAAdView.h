@@ -3,7 +3,7 @@
 //  AppLovinSDK
 //
 //  Created by Thomas So on 8/9/18.
-//  Copyright © 2019 AppLovin Corporation. All rights reserved.
+//  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -25,12 +25,29 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithAdUnitIdentifier:(NSString *)adUnitIdentifier;
 
 /**
- * Create a new ad view for a given ad unit id and sdk.
+ * Create a new ad view for a given ad unit id.
  *
  * @param adUnitIdentifier Ad unit id to load ads for.
- * @param sdk              SDK to use. An instance of the SDK may be obtained by calling +[ALSdk shared].
+ * @param sdk                              SDK to use. An instance of the SDK may be obtained by calling +[ALSdk shared].
  */
 - (instancetype)initWithAdUnitIdentifier:(NSString *)adUnitIdentifier sdk:(ALSdk *)sdk;
+
+/**
+ * Create a new ad view for a given ad unit id and ad format.
+ *
+ * @param adUnitIdentifier Ad unit id to load ads for.
+ * @param adFormat                   Ad format to load ads for.
+ */
+- (instancetype)initWithAdUnitIdentifier:(NSString *)adUnitIdentifier adFormat:(MAAdFormat *)adFormat;
+
+/**
+ * Create a new ad view for a given ad unit id, ad format, and sdk.
+ *
+ * @param adUnitIdentifier Ad unit id to load ads for.
+ * @param adFormat                   Ad format to load ads for.
+ * @param sdk                              SDK to use. An instance of the SDK may be obtained by calling +[ALSdk shared].
+ */
+- (instancetype)initWithAdUnitIdentifier:(NSString *)adUnitIdentifier adFormat:(MAAdFormat *)adFormat sdk:(ALSdk *)sdk;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
@@ -42,9 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) IBOutlet id<MAAdViewAdDelegate> delegate;
 
 /**
- * Set an extra parameter to pass to the server.
+ * Set an extra parameter for the ad.
  *
- * @param key   Parameter key.
+ * @param key     Parameter key.
  * @param value Parameter value.
  */
 - (void)setExtraParameterForKey:(NSString *)key value:(nullable NSString *)value;

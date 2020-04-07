@@ -2,8 +2,7 @@
 //  ALNativeAd.h
 //  AppLovinSDK
 //
-//
-//  Copyright © 2019 AppLovin Corporation. All rights reserved.
+//  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
 #import "ALPostbackDelegate.h"
@@ -111,11 +110,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)launchClickTarget;
 
-@end
-
-@interface ALNativeAd(ALDeprecated)
-@property (strong, nonatomic, readonly, nullable) NSURL *clickURL __deprecated_msg("Invoke method -launchClickTarget rather than opening this URL yourself.");
-@property (strong, nonatomic, readonly) NSURL *impressionTrackingURL __deprecated_msg("Invoke method -trackImpression or -trackImpressionAndNotify: rather than firing this URL yourself.");
 @end
 
 NS_ASSUME_NONNULL_END

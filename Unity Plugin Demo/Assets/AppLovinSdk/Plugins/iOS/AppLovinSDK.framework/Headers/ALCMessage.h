@@ -35,6 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Initialize a message with data in a pre-determined format for a given topic.
  */
 - (instancetype)initWithData:(NSDictionary<NSString *, id> *)data topic:(NSString *)topic fromPublisher:(id<ALCPublisher>)publisher;
+- (instancetype)initWithData:(NSDictionary<NSString *, id> *)data topic:(NSString *)topic fromPublisher:(id<ALCPublisher>)publisher sticky:(BOOL)sticky;
 - (instancetype)initWithName:(NSNotificationName)name object:(nullable id)object userInfo:(nullable NSDictionary *)userInfo NS_UNAVAILABLE;
 - (instancetype)initWithCoder:(NSCoder *)decoder NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;

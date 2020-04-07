@@ -1,8 +1,7 @@
 //
 //  ALInterstitialAd.h
 //
-//
-//  Copyright © 2019 AppLovin Corporation. All rights reserved.
+//  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -77,17 +76,12 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface ALInterstitialAd (ALDeprecated)
-- (void)showOverPlacement:(NSString *)placement __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
-+ (ALInterstitialAd *)showOverPlacement:(nullable NSString *)placement __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
-- (void)showOver:(UIWindow *)window placement:(nullable NSString *)placement andRender:(ALAd *)ad __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
-+ (ALInterstitialAd *)showOver:(UIWindow *)window placement:(nullable NSString* )placement __deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
 + (BOOL)isReadyForDisplay __deprecated_msg("Checking whether an ad is ready for display has been deprecated and will be removed in a future SDK version. Please use `show`, `showOver:` or `showOver:andRender:` to display an ad.");
 @property (readonly, atomic, getter=isReadyForDisplay) BOOL readyForDisplay __deprecated_msg("Checking whether an ad is ready for display has been deprecated and will be removed in a future SDK version. Please use `show`, `showOver:` or `showOver:andRender:` to display an ad.");
 - (void)dismiss __deprecated_msg("Dismissing an interstitial while playing negatively affects CPM and is highy discouraged. It is now deprecated and will be removed in a future SDK version.");
 + (ALInterstitialAd *)showOver:(UIWindow *)window __deprecated_msg("Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use show instead.");
 - (void)showOver:(UIWindow *)window __deprecated_msg("Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use show instead.");
 - (void)showOver:(UIWindow *)window andRender:(ALAd *)ad __deprecated_msg("Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use showAd: instead.");
-
 @end
 
 NS_ASSUME_NONNULL_END

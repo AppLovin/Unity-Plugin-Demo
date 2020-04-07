@@ -3,7 +3,7 @@
 //  AppLovinSDK
 //
 //  Created by Basil on 2/27/12.
-//  Copyright © 2019 AppLovin Corporation. All rights reserved.
+//  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
 #import "ALAd.h"
@@ -80,10 +80,5 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addAdUpdateObserver:(id<ALAdUpdateObserver>)adListener ofSize:(ALAdSize *)adSize __deprecated_msg("Listening to ad updates has been deprecated. The `ALAdView` class for banners, leaderboards, and mrecs no longer automatically refresh contents by itself. You must explicitly call `[ALAdView loadNextAd]` or `[ALAdView renderAd: ...]`. This method will be removed in a future SDK version.");
 - (void)removeAdUpdateObserver:(id<ALAdUpdateObserver>)adListener ofSize:(ALAdSize *)adSize __deprecated_msg("Listening to ad updates has been deprecated. The `ALAdView` class for banners, leaderboards, and mrecs no longer automatically refresh contents by itself. You must explicitly call `[ALAdView loadNextAd]` or `[ALAdView renderAd: ...]`. This method will be removed in a future SDK version.");
 @end
-
-extern NSString *const ALDeepLinkCommandNextAd;
-extern NSString *const ALDeepLinkCommandCloseAd;
-extern NSString *const ALDeepLinkCommandExpandAd;
-extern NSString *const ALDeepLinkCommandContractAd;
 
 NS_ASSUME_NONNULL_END

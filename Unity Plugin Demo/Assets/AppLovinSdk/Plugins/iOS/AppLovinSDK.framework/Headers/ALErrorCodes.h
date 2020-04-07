@@ -2,7 +2,7 @@
 //  ALErrorCodes.h
 //  AppLovinSDK
 //
-//  Copyright © 2019 AppLovin Corporation. All rights reserved.
+//  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
 // Loading & Displaying Ads

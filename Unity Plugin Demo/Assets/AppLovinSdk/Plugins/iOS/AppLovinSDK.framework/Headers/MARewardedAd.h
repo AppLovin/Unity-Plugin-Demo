@@ -3,7 +3,7 @@
 //  AppLovinSDK
 //
 //  Created by Thomas So on 8/9/18.
-//  Copyright © 2019 AppLovin Corporation. All rights reserved.
+//  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
 #import "ALSdk.h"
@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id<MARewardedAdDelegate> delegate;
 
 /**
- * Set an extra parameter to pass to the server.
+ * Set an extra parameter for the ad.
  *
  * @param key   Parameter key.
  * @param value Parameter value.

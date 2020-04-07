@@ -3,7 +3,7 @@
 //  AppLovinSDK
 //
 //  Created by Basil on 3/1/12.
-//  Copyright © 2019 AppLovin Corporation. All rights reserved.
+//  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -43,9 +43,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  Please note: This delegate is retained strongly and might lead to retain cycles if delegate holds strong reference to this ALAdView.
  */
 @property (nonatomic, strong, nullable) IBOutlet id<ALAdViewEventDelegate> adEventDelegate;
-
-// Primarily for internal use; banners and mrecs cannot contain videos.
-@property (nonatomic, strong, nullable) IBOutlet id<ALAdVideoPlaybackDelegate> adVideoPlaybackDelegate;
 
 /**
  * @name Ad View Configuration

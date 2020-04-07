@@ -3,7 +3,7 @@
 //  AppLovinSDK
 //
 //  Created by Thomas So on 5/21/15.
-//  Copyright © 2019 AppLovin Corporation. All rights reserved.
+//  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
 #import "ALNativeAdLoadDelegate.h"
@@ -37,15 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface ALNativeAdService(ALDeprecated)
-- (void)preloadAdForZoneIdentifier:(NSString *)zoneIdentifier __deprecated_msg("Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use loadNextAdAndNotify: to load ads.");
-- (BOOL)hasPreloadedAdForZoneIdentifier:(NSString *)zoneIdentifier __deprecated_msg("Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use loadNextAdAndNotify: to load ads.");
-- (void)loadNativeAdGroupOfCount:(NSUInteger)numberOfAdsToLoad
-                       andNotify:(nullable id<ALNativeAdLoadDelegate>)delegate
-__deprecated_msg("Loading multiple native ads has been deprecated and will be removed in a future SDK version. Please use loadNextAdAndNotify: instead.");
-- (void)loadNativeAdGroupOfCount:(NSUInteger)numberOfAdsToLoad
-               forZoneIdentifier:(nullable NSString *)zoneIdentifier
-                       andNotify:(nullable id<ALNativeAdLoadDelegate>)delegate
-__deprecated_msg("Loading multiple native ads has been deprecated and will be removed in a future SDK version. Please use loadNextAdAndNotify: instead.");
+- (void)loadNativeAdGroupOfCount:(NSUInteger)numberOfAdsToLoad andNotify:(nullable id<ALNativeAdLoadDelegate>)delegate __deprecated_msg("Loading multiple native ads has been deprecated and will be removed in a future SDK version. Please use loadNextAdAndNotify: instead.");
 @end
 
 NS_ASSUME_NONNULL_END

@@ -3,7 +3,7 @@
 //  AppLovinSDK
 //
 //  Created by Basil Shikin on 2/1/12.
-//  Copyright © 2019 AppLovin Corporation. All rights reserved.
+//  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

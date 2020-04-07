@@ -1,7 +1,8 @@
 //
 //  ALSdkSettings.h
+//  AppLovinSDK
 //
-//  Copyright © 2019 AppLovin Corporation. All rights reserved.
+//  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
 NS_ASSUME_NONNULL_BEGIN
@@ -26,11 +27,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (assign, atomic) BOOL muted;
 
-@end
+/**
+ * Enable devices to receive test ads, by passing in the advertising identifier (IDFA) of each test device.
+ * Refer to AppLovin logs for the IDFA of your current device.
+ */
+@property (nonatomic, copy) NSArray<NSString *> *testDeviceAdvertisingIdentifiers;
 
-@interface ALSdkSettings(ALDeprecated)
-@property (copy, atomic) NSString *autoPreloadAdSizes __deprecated_msg("Manually managing what ads SDK should automatically preload has been deprecated and will be removed in a future SDK version.");
-@property (copy, atomic) NSString *autoPreloadAdTypes __deprecated_msg("Manually managing what ads SDK should automatically preload has been deprecated and will be removed in a future SDK version.");
 @end
 
 NS_ASSUME_NONNULL_END

@@ -3,7 +3,7 @@
 //  AppLovinSDK
 //
 //  Created by Thomas So on 1/28/18.
-//  Copyright © 2019 AppLovin Corporation. All rights reserved.
+//  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
 NS_ASSUME_NONNULL_BEGIN
