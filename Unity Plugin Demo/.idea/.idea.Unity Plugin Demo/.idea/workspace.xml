@@ -2,95 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5924ab5-0550-4ff7-bdc5-5993fc521490" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/Android/applovin-sdk.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/Android/applovin-sdk.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/Android/applovin-sdk.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/Android/applovin-sdk.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinSDK.framework/AppLovinSDK" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinSDK.framework/AppLovinSDK" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinSDK.framework/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinSDK.framework/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinUnity.mm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinUnity.mm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinUnity.mm.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinUnity.mm.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity Plugin Demo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity Plugin Demo/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity Plugin Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity Plugin Demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-767160412">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="cs" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="C#" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cs" value="52" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="C#" value="52" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4950">
-              <caret line="330" column="25" selection-start-line="330" selection-start-column="25" selection-end-line="330" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/MainMenu.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-              <folding>
-                <marker date="1579217630064" expanded="true" signature="0:135" ph="/* MainMenu.cs ... */" />
-                <marker date="1579217630064" expanded="false" signature="143:237" ph="..." />
-                <marker date="1579217630064" expanded="true" signature="276:3628" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="859:1519" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="1223:1308" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="1553:1774" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="1825:2273" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="1874:2068" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="2301:2414" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="2465:3532" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="2508:2557" ph="/* Special Handling for Rewarded events ... */" />
-                <marker date="1579217630064" expanded="true" signature="2589:3144" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="2632:3140" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="2956:3081" ph="/* Do something with this info - for example, grant coins to the user ... */" />
-                <marker date="1579217630064" expanded="true" signature="3293:3529" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="3364:3440" ph="{...}" />
-                <marker date="1579217630064" expanded="true" signature="3568:3626" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -105,69 +24,43 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/Editor/AppLovinPostProcessBuildiOS.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/Editor/AppLovinPostProcessBuildiOS.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/Editor/AppLovinPostProcessBuildiOS.cs" />
-        <option value="$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs" />
         <option value="$PROJECT_DIR$/Assets/MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="1027" />
-  </component>
+  <component name="ProjectId" id="1aBpyDjWVxL2NLSIGuShbWopGzt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="UnityExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
-      </pane>
-      <pane id="FileSystemExplorer" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <method v="2" />
@@ -189,56 +82,15 @@
       <workItem from="1573425305613" duration="43000" />
       <workItem from="1573425525343" duration="36000" />
       <workItem from="1579217618583" duration="400000" />
+      <workItem from="1586219095355" duration="68000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1836000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4010989" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" order="10" />
-      <window_info anchor="bottom" id="Unit Tests" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -248,47 +100,5 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/Editor/AppLovinPostProcessBuildiOS.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4950">
-          <caret line="330" column="25" selection-start-line="330" selection-start-column="25" selection-end-line="330" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/MainMenu.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding>
-            <marker date="1579217630064" expanded="true" signature="0:135" ph="/* MainMenu.cs ... */" />
-            <marker date="1579217630064" expanded="false" signature="143:237" ph="..." />
-            <marker date="1579217630064" expanded="true" signature="276:3628" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="859:1519" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="1223:1308" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="1553:1774" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="1825:2273" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="1874:2068" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="2301:2414" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="2465:3532" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="2508:2557" ph="/* Special Handling for Rewarded events ... */" />
-            <marker date="1579217630064" expanded="true" signature="2589:3144" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="2632:3140" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="2956:3081" ph="/* Do something with this info - for example, grant coins to the user ... */" />
-            <marker date="1579217630064" expanded="true" signature="3293:3529" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="3364:3440" ph="{...}" />
-            <marker date="1579217630064" expanded="true" signature="3568:3626" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

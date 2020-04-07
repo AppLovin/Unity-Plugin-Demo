@@ -115,8 +115,8 @@ public class AppLovin
 	#endif
 
 	#if UNITY_ANDROID
-		public AndroidJavaClass applovinFacade = new AndroidJavaClass("com.applovin.sdk.unity.AppLovinFacade");
-		public AndroidJavaObject currentActivity = null;
+		public static AndroidJavaClass applovinFacade = new AndroidJavaClass("com.applovin.sdk.unity.AppLovinFacade");
+		public static AndroidJavaObject currentActivity = null;
 	#endif
 
 	public static AppLovin DefaultPlugin = null;
