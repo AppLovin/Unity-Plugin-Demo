@@ -21,10 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ALAdService : NSObject
 
 /**
- * @name Loading and Preloading Ads
- */
-
-/**
  * Fetch a new ad, of a given size, notifying a supplied delegate on completion.
  *
  * @param adSize    Size of an ad to load. Must not be nil.
