@@ -60,6 +60,9 @@ public class AppLovin
 		private static extern void _AppLovinSetVerboseLoggingOn (string isVerboseLogging);
 
 		[DllImport ("__Internal")]
+		private static extern void _AppLovinSetTestDeviceAdvertisingIdentifiers (string[] advertisingIdentifiers, int size);
+
+		[DllImport ("__Internal")]
 		private static extern void _AppLovinSetMuted (string muted);
 
 		[DllImport ("__Internal")]
@@ -283,6 +286,20 @@ public class AppLovin
 
 		#if UNITY_IPHONE
 			_AppLovinSetVerboseLoggingOn(verboseLoggingOn);
+		#endif
+		#endif
+	}
+
+	public void setTestDeviceAdvertisingIdentifiers(string[] advertisingIdentifiers)
+	{
+		#if !UNITY_EDITOR
+		#if UNITY_ANDROID
+			object[] arguments = { advertisingIdentifiers };
+			applovinFacade.CallStatic("SetTestDeviceAdvertisingIds", arguments);
+		#endif
+
+		#if UNITY_IPHONE
+			_AppLovinSetTestDeviceAdvertisingIdentifiers(advertisingIdentifiers, advertisingIdentifiers.Length);
 		#endif
 		#endif
 	}
@@ -706,6 +723,16 @@ public class AppLovin
 	public static void SetVerboseLoggingOn (string verboseLogging)
 	{
 		getDefaultPlugin ().setVerboseLoggingOn (verboseLogging);
+	}
+
+    /**
+     * Enable devices to receive test ads, by passing in the advertising identifier (IDFA/GAID) of each test device.
+     * Refer to AppLovin logs for the IDFA/GAID of your current device.
+     * @param advertisingIdentifiers String list of advertising identifiers from devices to receive test ads.
+	 */
+	public static void SetTestDeviceAdvertisingIdentifiers(string[] advertisingIdentifiers)
+	{
+		getDefaultPlugin ().setTestDeviceAdvertisingIdentifiers (advertisingIdentifiers);
 	}
 
 	/**

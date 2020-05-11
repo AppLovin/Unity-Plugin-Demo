@@ -33,8 +33,8 @@ NSString * kDefaultZoneIdForIncentInterstitial = @"zone_id_incent_interstitial";
 // When native code plugin is implemented in .mm / .cpp file, then functions
 // should be surrounded with extern "C" block to conform C function naming rules
 extern "C" {
-    static const NSString * UNITY_PLUGIN_VERSION = @"6.2.1";
-    static const NSString * UNITY_BUILD_NUMBER = @"60201";
+    static const NSString * UNITY_PLUGIN_VERSION = @"6.3.0";
+    static const NSString * UNITY_BUILD_NUMBER = @"60300";
     
     static const CGFloat POSITION_CENTER = -10000;
     static const CGFloat POSITION_LEFT = -20000;
@@ -295,6 +295,17 @@ extern "C" {
     {
         NSString* verboseLoggingStr = [NSString stringWithUTF8String: verboseLogging];
         [[ALSdk shared] settings].isVerboseLogging = [verboseLoggingStr boolValue];
+    }
+
+    void _AppLovinSetTestDeviceAdvertisingIdentifiers(char **advertisingIdentifiers, int size)
+    {
+        NSMutableArray<NSString *> *advertisingIdentifiersArray = [NSMutableArray arrayWithCapacity: size];
+        for (int i = 0; i < size; i++)
+        {
+            [advertisingIdentifiersArray addObject: [NSString stringWithUTF8String: advertisingIdentifiers[i]]];
+        }
+
+        [[ALSdk shared] settings].testDeviceAdvertisingIdentifiers = advertisingIdentifiersArray;
     }
 
     void _AppLovinSetMuted(const char * muted)

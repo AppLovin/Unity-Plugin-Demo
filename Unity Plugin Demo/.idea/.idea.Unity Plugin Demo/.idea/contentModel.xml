@@ -5,7 +5,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AdManager.cs" t="Include" />
         <e p="AppLovinSdk" t="Include">
           <e p="Plugins" t="Include">
             <e p="Android" t="Include">
