@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a5924ab5-0550-4ff7-bdc5-5993fc521490" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity Plugin Demo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity Plugin Demo/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity Plugin Demo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity Plugin Demo/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity Plugin Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity Plugin Demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/Android/applovin-sdk.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/Android/applovin-sdk.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/Android/applovin-sdk.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/Android/applovin-sdk.aar.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/Android/applovin-unity-plugin.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/Android/applovin-unity-plugin.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinSDK.framework/AppLovinSDK" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinSDK.framework/AppLovinSDK" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinSDK.framework/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinSDK.framework/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinUnity.mm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Plugins/iOS/AppLovinUnity.mm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +29,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/Editor/AppLovinPostProcessBuildiOS.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/AppLovin.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/AdManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AppLovinSdk/Scripts/Editor/AppLovinPostProcessBuildiOS.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -92,6 +96,7 @@
       <workItem from="1579217618583" duration="400000" />
       <workItem from="1586219095355" duration="553000" />
       <workItem from="1587081298998" duration="2410000" />
+      <workItem from="1589160714267" duration="635000" />
     </task>
     <servers />
   </component>

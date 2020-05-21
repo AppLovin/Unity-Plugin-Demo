@@ -11,35 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 @class ALVariableService;
 
 /**
- * Protocol definition for a callback to be invoked when latest variables are retrieved from the server.
- */
-@protocol ALVariableServiceDelegate<NSObject>
-
-/**
- * Called when new variables are retrieved. The initial set of variables will be returned after the AppLovin SDK finishes initializing.
- *
- * @param variableService The instance of ALVariableService that had its variables updated for.
- * @param variables       The dictionary containing the latest variable values. These values may also be retrieved via the various getters in this class.
- */
-- (void)variableService:(ALVariableService *)variableService didUpdateVariables:(NSDictionary<NSString *, id> *)variables;
-
-@end
-
-/**
  * This service allows for retrieval of variables pre-defined on AppLovin's dashboard.
  */
 @interface ALVariableService : NSObject
-
-/**
- * Register a delegate to be notified when the latest variables are retrieved from the server.
- * The initial set of variables will be returned after the AppLovin SDK finishes initializing.
- */
-@property (nonatomic, weak, nullable) id<ALVariableServiceDelegate> delegate;
-
-/**
- * Explicitly retrieve the latest variables to be returned via the delegate. Please make sure that the delegate has been set via -[ALVariableService delegate].
- */
-- (void)loadVariables;
 
 /**
  * Returns the variable value associated with the given key, or false if
@@ -87,6 +61,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
+@end
+
+__attribute__ ((deprecated))
+@protocol ALVariableServiceDelegate<NSObject>
+- (void)variableService:(ALVariableService *)variableService didUpdateVariables:(NSDictionary<NSString *, id> *)variables __deprecated_msg("This API has been deprecated. Please use our SDK's initialization callback to retrieve variables instead.");
+@end
+
+@interface ALVariableService(ALDeprecated)
+@property (nonatomic, weak, nullable) id<ALVariableServiceDelegate> delegate __deprecated_msg("This API has been deprecated. Please use our SDK's initialization callback to retrieve variables instead.");
+- (void)loadVariables __deprecated_msg("This API has been deprecated. Please use our SDK's initialization callback to retrieve variables instead.");
 @end
 
 NS_ASSUME_NONNULL_END
