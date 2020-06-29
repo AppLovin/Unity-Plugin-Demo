@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - High Level SDK Properties
 
 /**
- * The current version of the SDK.
+ * The current version of the SDK. The returned value will be in the format of "<Major>.<Minor>.<Revision>".
  */
 @property (class, nonatomic, copy, readonly) NSString *version;
 

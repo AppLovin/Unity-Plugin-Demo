@@ -13,7 +13,6 @@
 #import <AppLovinSDK/ALAdService.h>
 #import <AppLovinSDK/ALAdSize.h>
 #import <AppLovinSDK/ALAdType.h>
-#import <AppLovinSDK/ALAdUpdateDelegate.h>
 #import <AppLovinSDK/ALAdVideoPlaybackDelegate.h>
 #import <AppLovinSDK/ALAdView.h>
 #import <AppLovinSDK/ALAdViewEventDelegate.h>
@@ -38,6 +37,7 @@
 #import <AppLovinSDK/MAAdView.h>
 #import <AppLovinSDK/MAInterstitialAd.h>
 #import <AppLovinSDK/MARewardedAd.h>
+#import <AppLovinSDK/MARewardedInterstitialAd.h>
 #import <AppLovinSDK/MAAd.h>
 #import <AppLovinSDK/MAAdDelegate.h>
 #import <AppLovinSDK/MAAdFormat.h>

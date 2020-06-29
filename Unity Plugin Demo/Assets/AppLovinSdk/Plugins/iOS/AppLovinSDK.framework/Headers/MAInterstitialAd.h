@@ -53,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Show the loaded interstitial.
  *
- * Use -[MAInterstitialAd delegate] to assign a delegate that should be notified about display events.
+ * Use -[MAInterstitialAd setDelegate:] to assign a delegate that should be notified about display events.
  * Use -[MAInterstitialAd isReady] to check if an ad was successfully loaded.
  */
 - (void)showAd;
@@ -61,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Show the loaded interstitial for a given placement to tie ad events to.
  *
- * Use -[MAInterstitialAd delegate] to assign a delegate that should be notified about display events.
+ * Use -[MAInterstitialAd setDelegate:] to assign a delegate that should be notified about display events.
  * Use -[MAInterstitialAd isReady] to check if an ad was successfully loaded.
  *
  * @param placement The placement to tie the showing ad's events to.

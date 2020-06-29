@@ -59,12 +59,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly, nullable) NSString *zoneIdentifier;
 
 /**
- *  Whether or not this ALAdView should automatically load and rotate banners.
- *
- *  If YES, ads will be automatically loaded and updated. If NO, you are reponsible for this behavior via [ALAdView loadNextAd]. Defaults to YES.
+ * Whether or not this ad view should automatically load an ad when inflated from StoryBoard or a nib file (when -[UIView awakeFromNib] is called).
+ * The default value is YES. If you set it to NO, you are responsible for loading the ad by invoking `-[ALAdView loadNextAd]`.
  */
 @property (nonatomic, assign, getter=isAutoloadEnabled, setter=setAutoloadEnabled:) BOOL autoload;
-@property (nonatomic, assign, getter=isAutoloadEnabled, setter=setAutoloadEnabled:) BOOL shouldAutoload;
 
 /**
  * @name Loading and Rendering Ads

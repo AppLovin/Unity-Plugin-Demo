@@ -10,7 +10,6 @@
 #import "ALAdSize.h"
 #import "ALAdLoadDelegate.h"
 #import "ALAdDisplayDelegate.h"
-#import "ALAdUpdateDelegate.h"
 #import "ALAdVideoPlaybackDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -73,8 +72,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)preloadAdForZoneIdentifier:(NSString *)zoneIdentifier __deprecated_msg("Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALAdService loadNextAdForZoneIdentifier:andNotify:] to load ads to display.");
 - (BOOL)hasPreloadedAdOfSize:(ALAdSize *)adSize __deprecated_msg("Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALAdService loadNextAd:andNotify:] to load ads to display.");
 - (BOOL)hasPreloadedAdForZoneIdentifier:(NSString *)zoneIdentifier __deprecated_msg("Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALAdService loadNextAdForZoneIdentifier:andNotify:] to load ads to display.");
-- (void)addAdUpdateObserver:(id<ALAdUpdateObserver>)adListener ofSize:(ALAdSize *)adSize __deprecated_msg("Listening to ad updates has been deprecated. The `ALAdView` class for banners, leaderboards, and mrecs no longer automatically refresh contents by itself. You must explicitly call `[ALAdView loadNextAd]` or `[ALAdView renderAd: ...]`. This method will be removed in a future SDK version.");
-- (void)removeAdUpdateObserver:(id<ALAdUpdateObserver>)adListener ofSize:(ALAdSize *)adSize __deprecated_msg("Listening to ad updates has been deprecated. The `ALAdView` class for banners, leaderboards, and mrecs no longer automatically refresh contents by itself. You must explicitly call `[ALAdView loadNextAd]` or `[ALAdView renderAd: ...]`. This method will be removed in a future SDK version.");
 @end
 
 NS_ASSUME_NONNULL_END

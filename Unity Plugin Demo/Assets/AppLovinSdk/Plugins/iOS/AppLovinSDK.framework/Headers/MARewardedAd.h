@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MARewardedAd : NSObject
 
 /**
- * Get an instance of rewarded ad.
+ * Get an instance of a MAX rewarded ad.
  *
  * @param adUnitIdentifier Ad unit id for which to get the instance.
  *
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedWithAdUnitIdentifier:(NSString *)adUnitIdentifier;
 
 /**
- * Get an instance of rewarded ad.
+ * Get an instance of a MAX rewarded ad.
  *
  * @param adUnitIdentifier Ad unit id for which to get the instance.
  * @param sdk              SDK  to use.
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Show the loaded rewarded ad.
  *
- * Use -[MARewardedAd delegate] to assign a delegate that should be notified about display events.
+ * Use -[MARewardedAd setDelegate:] to assign a delegate that should be notified about display events.
  * Use -[MARewardedAd isReady] to check if an ad was successfully loaded.
  */
 - (void)showAd;
@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Show the loaded rewarded ad for a given placement to tie ad events to.
  *
- * Use -[MARewardedAd delegate] to assign a delegate that should be notified about display events.
+ * Use -[MARewardedAd setDelegate:] to assign a delegate that should be notified about display events.
  * Use -[MARewardedAd isReady] to check if an ad was successfully loaded.
  *
  * @param placement The placement to tie the showing ad's events to.

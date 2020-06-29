@@ -39,12 +39,22 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly, class) MAAdFormat *rewarded;
 
 /**
+ * Represents a fullscreen ad which the user can skip and be granted a reward upon successful completion of the ad.
+ */
+@property (nonatomic, strong, readonly, class) MAAdFormat *rewardedInterstitial;
+
+/**
  * Represents a native advertisement.
  */
 @property (nonatomic, strong, readonly, class) MAAdFormat *native;
 
+/**
+ * @return the size of the AdView format ad, or CGSizeZero otherwise.
+ */
+@property (nonatomic, assign, readonly) CGSize size;
 
 - (instancetype)init NS_UNAVAILABLE;
+- (instancetype)new NS_UNAVAILABLE;
 
 @end
 
