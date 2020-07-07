@@ -360,8 +360,7 @@ extern "C" {
         if ( ad )
         {
             // Just display it
-            [[ALInterstitialAd shared] showOver: [UIApplication sharedApplication].keyWindow
-                                      andRender: ad];
+            [[ALInterstitialAd shared] showAd: ad];
         }
         // Otherwise, we need to load the ad
         else
