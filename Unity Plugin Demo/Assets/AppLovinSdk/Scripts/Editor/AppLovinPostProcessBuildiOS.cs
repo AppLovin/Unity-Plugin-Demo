@@ -31,7 +31,7 @@ public static class AppLovinPostProcessBuildiOS
             // Add the -ObjC linker flag
             //
 #if UNITY_2019_3_OR_NEWER
-            var target = project.GetUnityMainTargetGuid();
+            var target = project.GetUnityFrameworkTargetGuid();
 #else
             var target = project.TargetGuidByName("Unity-iPhone");
 #endif
