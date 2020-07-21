@@ -20,8 +20,7 @@ public class AppLovinSDKConflictCheck
         foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
         {
             var applovin = assembly.GetType("MaxSdk");
-            if(applovin == null)
-                continue;
+            if(applovin == null) continue;
 
             Debug.Log("MAX SDK detected. Removing standalone AppLovin SDK.");
             string applovinSDKPath = Path.Combine(Application.dataPath, "AppLovinSdk");
