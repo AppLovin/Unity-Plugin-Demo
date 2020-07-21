@@ -8,32 +8,14 @@
 
 using System;
 using System.IO;
-using UnityEditor.Build;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-#if UNITY_2018_1_OR_NEWER
-using UnityEditor.Build.Reporting;
-#endif
-
-public class AppLovinPreProcessBuild : 
-#if UNITY_2018_1_OR_NEWER
-    IPreprocessBuildWithReport
-#else
-    IPreprocessBuild
-#endif
+[InitializeOnLoad]
+public class AppLovinPreProcessBuild
 {
-    public int callbackOrder 
-    { 
-        get { return int.MinValue; } 
-    }
-
-#if UNITY_2018_1_OR_NEWER
-    public void OnPreprocessBuild(BuildReport report)
-#else
-    public void OnPreprocessBuild(BuildTarget target, string path)
-#endif
+    static AppLovinPreProcessBuild()
     {
         foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
         {
