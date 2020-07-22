@@ -1,5 +1,5 @@
 ﻿//
-//  AppLovinSDKConflictCheck.cs
+//  AppLovinSdkConflictCheck.cs
 //  AppLovin Unity Plugin
 //
 //  Created by Max Buck on 7/21/20.
@@ -13,9 +13,9 @@ using UnityEditor;
 using UnityEngine;
 
 [InitializeOnLoad]
-public class AppLovinSDKConflictCheck
+public class AppLovinSdkConflictCheck
 {
-    static AppLovinSDKConflictCheck()
+    static AppLovinSdkConflictCheck()
     {
         foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
         {
