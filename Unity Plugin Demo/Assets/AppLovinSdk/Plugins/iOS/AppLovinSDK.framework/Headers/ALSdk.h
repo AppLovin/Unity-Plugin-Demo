@@ -167,23 +167,34 @@ typedef void (^ALSdkInitializationCompletionHandler)(ALSdkConfiguration *configu
 + (nullable ALSdk *)shared;
 
 /**
+ * Get a shared instance of AppLovin SDK.
+ *
+ * Please make sure your SDK key is set in the application's Info.plist under the property 'AppLovinSdkKey'.
+ *
+ * @param settings  SDK settings object.
+ *
+ * @return The shared instance of AppLovin's SDK, or nil if SDK key is not set in the application's Info.plist.
+ */
++ (nullable ALSdk *)sharedWithSettings:(ALSdkSettings *)settings;
+
+/**
  * Get an instance of AppLovin SDK using the provided SDK key.
  *
- * @param sdkKey SDK key to use for the instance of the AppLovin SDK.
+ * @param key SDK key to use for the instance of the AppLovin SDK.
  *
  * @return An instance of AppLovinSDK, or nil if SDK key is not set.
  */
-+ (nullable ALSdk *)sharedWithKey:(NSString *)sdkKey;
++ (nullable ALSdk *)sharedWithKey:(NSString *)key;
 
 /**
  * Get an instance of AppLovin SDK using the provided SDK key and SDK settings.
  *
- * @param sdkKey    SDK key to use for the instance of the AppLovin SDK.
+ * @param key    SDK key to use for the instance of the AppLovin SDK.
  * @param settings  SDK settings object.
  *
  * @return An instance of AppLovinSDK, or nil if SDK key is not set.
  */
-+ (nullable ALSdk *)sharedWithKey:(NSString *)sdkKey settings:(ALSdkSettings *)settings;
++ (nullable ALSdk *)sharedWithKey:(NSString *)key settings:(ALSdkSettings *)settings;
 
 
 - (instancetype)init __attribute__((unavailable("Use +[ALSdk shared], +[ALSdk sharedWithKey:], or +[ALSdk sharedWithKey:settings:].")));

@@ -20,18 +20,23 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Verbose logging is <i>disabled</i> by default.
  */
-@property (assign, atomic) BOOL isVerboseLogging;
+@property (nonatomic, assign) BOOL isVerboseLogging;
 
 /**
  * Determines whether to begin video ads in a muted state or not. Defaults to NO unless changed in the dashboard.
  */
-@property (assign, atomic) BOOL muted;
+@property (nonatomic, assign) BOOL muted;
 
 /**
  * Enable devices to receive test ads, by passing in the advertising identifier (IDFA) of each test device.
  * Refer to AppLovin logs for the IDFA of your current device.
  */
 @property (nonatomic, copy) NSArray<NSString *> *testDeviceAdvertisingIdentifiers;
+
+/**
+ * The MAX ad unit ids that will be used for this instance of the SDK. 3rd-party SDKs will be initialized with the credentials configured for these ad unit ids.
+ */
+@property (nonatomic, copy) NSArray<NSString *> *initializationAdUnitIdentifiers;
 
 @end
 
