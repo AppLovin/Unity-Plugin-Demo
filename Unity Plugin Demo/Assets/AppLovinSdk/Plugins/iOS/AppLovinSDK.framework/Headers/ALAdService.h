@@ -64,6 +64,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (instancetype)init __attribute__((unavailable("Access ALAdService through ALSdk's adService property.")));
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

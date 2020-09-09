@@ -137,6 +137,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithFrame:(CGRect)frame size:(ALAdSize *)size sdk:(ALSdk *)sdk;
 - (instancetype)init __attribute__((unavailable("Use one of the other provided initializers")));
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

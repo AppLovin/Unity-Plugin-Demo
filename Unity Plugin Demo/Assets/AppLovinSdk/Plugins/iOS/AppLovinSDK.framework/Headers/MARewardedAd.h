@@ -35,6 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)sharedWithAdUnitIdentifier:(NSString *)adUnitIdentifier sdk:(ALSdk *)sdk;
 - (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 /**
  * Set a delegate that will be notified about ad events.

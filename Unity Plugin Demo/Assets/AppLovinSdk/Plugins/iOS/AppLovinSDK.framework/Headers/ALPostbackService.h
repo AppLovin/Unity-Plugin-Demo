@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)dispatchPostbackAsync:(NSURL *)targetURL andNotify:(nullable id<ALPostbackDelegate>)delegate;
 
++ (instancetype)new NS_UNAVAILABLE;
+
 @end
 
 NS_ASSUME_NONNULL_END

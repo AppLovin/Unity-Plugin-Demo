@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__deprecated_msg("Native ads have been deprecated and will be removed in a future SDK version.")
 @interface ALNativeAd : NSObject
 
 /**
@@ -109,6 +110,8 @@ NS_ASSUME_NONNULL_BEGIN
  * Calling this method launches Safari or the App Store and will result in your app being paused.
  */
 - (void)launchClickTarget;
+
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

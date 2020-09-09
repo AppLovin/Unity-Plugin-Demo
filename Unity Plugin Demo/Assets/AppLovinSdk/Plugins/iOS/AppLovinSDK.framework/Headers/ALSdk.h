@@ -198,6 +198,7 @@ typedef void (^ALSdkInitializationCompletionHandler)(ALSdkConfiguration *configu
 
 
 - (instancetype)init __attribute__((unavailable("Use +[ALSdk shared], +[ALSdk sharedWithKey:], or +[ALSdk sharedWithKey:settings:].")));
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

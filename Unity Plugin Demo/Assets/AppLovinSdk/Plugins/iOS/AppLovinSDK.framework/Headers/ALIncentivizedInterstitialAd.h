@@ -176,6 +176,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (instancetype)init __attribute__((unavailable("Use initWithSdk:, initWithZoneIdentifier:, or [ALIncentivizedInterstitialAd shared] instead.")));
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

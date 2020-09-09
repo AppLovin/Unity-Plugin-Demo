@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class ALNativeAdService;
 
+__deprecated_msg("Native ads have been deprecated and will be removed in a future SDK version.")
 @protocol ALNativeAdPrecacheDelegate <NSObject>
 
 /**

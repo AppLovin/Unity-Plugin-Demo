@@ -16,41 +16,48 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Set whether or not user has provided consent for information sharing with AppLovin.
  *
- * @param hasUserConsent 'YES' if the user has provided consent for information sharing with AppLovin. 'false' by default.
+ * @param hasUserConsent @c YES if the user has provided consent for information sharing with AppLovin. @c NO by default.
  */
 + (void)setHasUserConsent:(BOOL)hasUserConsent;
 
 /**
  * Check if user has provided consent for information sharing with AppLovin.
+ *
+ * @return @c YES if user has provided consent for information sharing.
  */
 + (BOOL)hasUserConsent;
 
 /**
  * Mark user as age restricted (i.e. under 16).
  *
- * @param isAgeRestrictedUser 'YES' if the user is age restricted (i.e. under 16).
+ * @param isAgeRestrictedUser @c YES if the user is age restricted (i.e. under 16).
  */
 + (void)setIsAgeRestrictedUser:(BOOL)isAgeRestrictedUser;
 
 /**
  * Check if user is age restricted.
+ *
+ * @return @c YES if user is age restricted. @c nil if not set.
  */
 + (BOOL)isAgeRestrictedUser;
 
 /**
  * Set whether or not user has opted out of the sale of their personal information.
  *
- * @param doNotSell 'YES' if the user has opted out of the sale of their personal information.
+ * @param doNotSell @c YES if the user has opted out of the sale of their personal information.
  */
 + (void)setDoNotSell:(BOOL)doNotSell;
 
 /**
  * Check if the user has opted out of the sale of their personal information.
+ *
+ * @return @c YES if user has opted out of the sale of their personal information.
  */
 + (BOOL)isDoNotSell;
 
 
 - (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

@@ -76,6 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (instancetype)init __attribute__((unavailable("Access ALEventService through ALSdk's eventService property.")));
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class ALSdk;
 @class ALNativeAd;
 
+__deprecated_msg("Native ads have been deprecated and will be removed in a future SDK version.")
 @interface ALNativeAdService : NSObject
 
 /**
@@ -33,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (instancetype)init __attribute__((unavailable("Access ALNativeAdService through ALSdk's nativeAdService property.")));
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

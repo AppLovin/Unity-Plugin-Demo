@@ -27,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (class, nonatomic, strong, readonly) ALAdType *autoIncentivized;
 
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
 @end
 
 @interface ALAdType(ALDeprecated)
