@@ -130,12 +130,16 @@ public class AppLovin
 	public static AppLovin getDefaultPlugin ()
 	{
 		if (DefaultPlugin == null) {
+        #if !UNITY_EDITOR
 			#if UNITY_ANDROID
 				AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 				DefaultPlugin = new AppLovin( jc.GetStatic<AndroidJavaObject>("currentActivity") );
 			#else
-			DefaultPlugin = new AppLovin ();
+	            DefaultPlugin = new AppLovin ();
 			#endif
+        #else
+            DefaultPlugin = new AppLovin ();
+        #endif
 		}
 
 		return DefaultPlugin;
@@ -539,11 +543,13 @@ public class AppLovin
 
 	public void enableImmersiveMode ()
 	{
+    #if !UNITY_EDITOR
 		#if UNITY_ANDROID
 		applovinFacade.CallStatic("EnableImmersiveMode", currentActivity);
 		#elif UNITY_IPHONE
 		// Immersive mode does not exist on iOS. Nothing to do.
 		#endif
+    #endif
 	}
 
 	private void setHasUserConsent (string hasUserConsent)
@@ -609,6 +615,7 @@ public class AppLovin
     /// </summary>
 	public static bool IsTablet()
 	{
+    #if !UNITY_EDITOR
 		#if UNITY_IOS
 			return _AppLovinIsTablet();
 		#elif UNITY_ANDROID
@@ -616,6 +623,9 @@ public class AppLovin
 		#else
 			return false;
 		#endif
+    #else
+        return false;
+    #endif
 	}
 
 	/**
